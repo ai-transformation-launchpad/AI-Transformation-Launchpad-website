@@ -1,0 +1,1414 @@
+```html
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+    <head>
+        <meta charset="utf-8">
+        <title>AI Business LaunchPad - Accelerate. Launch. Transform.</title>
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <link href="css/theme.css" rel="stylesheet" type="text/css">
+        <link href="./css/vendors/aos.css" rel="stylesheet">
+        <link rel="stylesheet" href="./css/vendors/swiper-bundle.min.css"/>
+        <link href="./style.css" rel="stylesheet">
+    </head>
+    <body class="font-inter antialiased bg-slate-900 text-slate-100 tracking-tight">
+        <!-- Page wrapper -->
+        <div class="flex flex-col min-h-screen overflow-hidden supports-[overflow:clip]:overflow-clip">
+            <!-- Site header -->
+            <header class="absolute w-full z-30">
+                <div class="max-w-6xl mx-auto px-4 sm:px-6">
+                    <div class="flex items-center justify-between h-16 md:h-20">
+                        <!-- Site branding -->
+                        <div class="flex-1">
+                            <!-- Logo -->
+                            <a class="inline-flex" href="index.html" aria-label="AI Business LaunchPad"> <img class="max-w-none" src="./images/aistartuplaunchpadlogolight.svg" width="100" height="38" alt="AI Business LaunchPad"> </a>
+                        </div>
+                        <!-- Desktop navigation -->
+                        <nav class="hidden md:flex md:grow">
+                            <!-- Desktop menu links -->
+                            <ul class="flex grow justify-center flex-wrap items-center">
+                                <li><a class="font-medium text-sm text-slate-300 hover:text-white mx-4 lg:mx-5 transition duration-150 ease-in-out" href="about.html">About</a>
+                                </li>
+                                <li><a class="font-medium text-sm text-slate-300 hover:text-white mx-4 lg:mx-5 transition duration-150 ease-in-out" href="programs.html">Programs</a>
+                                </li>
+                                <li><a class="font-medium text-sm text-slate-300 hover:text-white mx-4 lg:mx-5 transition duration-150 ease-in-out" href="resources.html">Resources</a>
+                                </li>
+                                <li><a class="font-medium text-sm text-slate-300 hover:text-white mx-4 lg:mx-5 transition duration-150 ease-in-out" href="community.html">Community</a>
+                                </li>
+                                <li><a class="font-medium text-sm text-slate-300 hover:text-white mx-4 lg:mx-5 transition duration-150 ease-in-out" href="pricing.html">Pricing</a>
+                                </li>
+                            </ul>
+                        </nav>
+                        <!-- Desktop sign in links -->
+                        <ul class="flex-1 flex justify-end items-center">
+                            <li><a class="font-medium text-sm text-slate-300 hover:text-white whitespace-nowrap transition duration-150 ease-in-out" href="signin.html">Sign in</a>
+                            </li>
+                            <li class="ml-6"><a class="btn-sm text-slate-300 hover:text-white transition duration-150 ease-in-out w-full group [background:linear-gradient(var(--color-slate-900),var(--color-slate-900))_padding-box,conic-gradient(var(--color-slate-400),var(--color-slate-700)_25%,var(--color-slate-700)_75%,var(--color-slate-400)_100%)_border-box] relative before:absolute before:inset-0 before:bg-slate-800/30 before:rounded-full before:pointer-events-none" href="signup.html"> <span class="relative inline-flex items-center">
+                                    Sign up <span class="tracking-normal text-purple-500 group-hover:translate-x-0.5 transition-transform duration-150 ease-in-out ml-1">-&gt;</span> </span> </a>
+                            </li>
+                        </ul>
+                        <!-- Mobile menu -->
+                        <div class="md:hidden flex items-center ml-4" x-data="{ expanded: false }">
+                            <!-- Hamburger button -->
+                            <button class="group inline-flex w-8 h-8 text-slate-300 hover:text-white text-center items-center justify-center transition" aria-controls="mobile-nav" :aria-expanded="expanded" @click.stop="expanded = !expanded"><span class="sr-only">Menu</span>
+                                <svg class="w-4 h-4 fill-current pointer-events-none" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+                                    <rect class="origin-center transition-all duration-300 ease-[cubic-bezier(.5,.85,.25,1.1)] -translate-y-[5px] group-aria-expanded:rotate-[315deg] group-aria-expanded:translate-y-0" y="7" width="16" height="2" rx="1"></rect>
+                                    <rect class="origin-center group-aria-expanded:rotate-45 transition-all duration-300 ease-[cubic-bezier(.5,.85,.25,1.8)]" y="7" width="16" height="2" rx="1"></rect>
+                                    <rect class="origin-center transition-all duration-300 ease-[cubic-bezier(.5,.85,.25,1.1)] translate-y-[5px] group-aria-expanded:rotate-[135deg] group-aria-expanded:translate-y-0" y="7" width="16" height="2" rx="1"></rect>
+                                </svg>
+                            </button>                             
+                            <!-- Mobile navigation -->
+                            <nav id="mobile-nav" class="absolute top-full z-20 left-0 w-full px-4 sm:px-6 overflow-hidden transition-all duration-300 ease-in-out" x-ref="mobileNav" :style="expanded ? 'max-height: ' + $refs.mobileNav.scrollHeight + 'px; opacity: 1' : 'max-height: 0; opacity: .8'" @click.outside="expanded = false" @keydown.escape.window="expanded = false" x-cloak>
+                                <ul class="border border-transparent [background:linear-gradient(var(--color-slate-900),var(--color-slate-900))_padding-box,conic-gradient(var(--color-slate-400),var(--color-slate-700)_25%,var(--color-slate-700)_75%,var(--color-slate-400)_100%)_border-box] rounded-lg px-4 py-1.5">
+                                    <li><a class="flex font-medium text-sm text-slate-300 hover:text-white py-1.5" href="about.html">About</a>
+                                    </li>
+                                    <li><a class="flex font-medium text-sm text-slate-300 hover:text-white py-1.5" href="programs.html">Programs</a>
+                                    </li>
+                                    <li><a class="flex font-medium text-sm text-slate-300 hover:text-white py-1.5" href="resources.html">Resources</a>
+                                    </li>
+                                    <li><a class="flex font-medium text-sm text-slate-300 hover:text-white py-1.5" href="community.html">Community</a>
+                                    </li>
+                                    <li><a class="flex font-medium text-sm text-slate-300 hover:text-white py-1.5" href="pricing.html">Pricing</a>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            <!-- Page content -->
+            <main class="grow">
+                <!-- Hero -->
+                <section>
+                    <div class="relative max-w-6xl mx-auto px-4 sm:px-6" style="padding-top: 0px;">
+                        <!-- Particles animation -->
+                        <div class="absolute inset-0 -z-10" aria-hidden="true">
+                            <canvas data-particle-animation></canvas>
+                        </div>
+                        <!-- Illustration -->
+                        <div class="absolute inset-0 -z-10 -mx-28 rounded-b-[3rem] pointer-events-none overflow-hidden" aria-hidden="true">
+                            <div class="absolute left-1/2 -translate-x-1/2 bottom-0 -z-10">
+                                <img src="./images/glow-bottom.svg" class="max-w-none" width="2146" height="774" alt="Hero Illustration">
+                            </div>
+                        </div>
+                        <div class="pt-32 pb-16 md:pt-52 md:pb-32" style="letter-spacing: 2px; padding-bottom: 30px; padding-top: 108px;">
+                            <!-- Hero content -->
+                            <div class="max-w-3xl mx-auto text-center" style="padding-bottom: 26px;">
+                                <h1 style="font-size: 4em;" class="h1 bg-clip-text text-transparent bg-linear-to-r from-slate-200/60 via-slate-200 to-slate-200/60 pb-4" data-aos="fade-down">AI Business LaunchPad</h1>
+                                <div class="mb-6" data-aos="fade-down" style="padding-bottom: 0px;">
+                                    <div class="inline-flex relative before:absolute before:inset-0 before:bg-purple-500 before:blur-md">
+                                        <a class="btn-sm py-0.5 text-slate-300 hover:text-white transition duration-150 ease-in-out group [background:linear-gradient(var(--color-purple-500),var(--color-purple-500))_padding-box,linear-gradient(var(--color-purple-500),var(--color-purple-200)_75%,transparent_100%)_border-box] relative before:absolute before:inset-0 before:bg-slate-800/50 before:rounded-full before:pointer-events-none shadow-sm" href="#0"> <span class="relative inline-flex items-center"><span class="tracking-normal text-purple-500 group-hover:translate-x-0.5 transition-transform duration-150 ease-in-out ml-1"><span style="letter-spacing: 2px; color: #f0e5e5;">Partnership Inquiries</span>-&gt;</span></span> </a>
+                                    </div>
+                                </div>
+                                <h2 class="text-lg text-slate-300 mb-8" data-aos="fade-down" data-aos-delay="200">Accelerate. Launch. Transform. Your Business, AI-Powered</h2>
+                                <p style="font-size: 16px; padding-bottom: 0px; letter-spacing: 0px; padding-top: 0px;">Unlock the power of Artificial Intelligence to build new AI-powered ventures or fundamentally transform existing operations into AI-driven powerhouses. Our guided programs, AI-driven tools, proprietary frameworks, and a supportive expert community provide everything you need to leverage AI for unprecedented speed, efficiency, and impact across any industry</p>
+                                <div class="max-w-xs mx-auto sm:max-w-none sm:inline-flex sm:justify-center space-y-4 sm:space-y-0 sm:space-x-4" data-aos="fade-down" data-aos-delay="400">
+                                    <div>
+                                        <a class="btn text-slate-900 bg-linear-to-r from-white/80 via-white to-white/80 hover:bg-white w-full transition duration-150 ease-in-out group" href="#0" style="padding-bottom: 5px;">
+                                            Start Your AI Transformation<span class="tracking-normal text-purple-500 group-hover:translate-x-0.5 transition-transform duration-150 ease-in-out ml-1">-&gt;</span> </a>
+                                    </div>
+                                    <div>
+                                        <a class="btn text-slate-200 hover:text-white bg-slate-900/25 hover:bg-slate-900/30 w-full transition duration-150 ease-in-out" href="#0"> <svg class="shrink-0 fill-slate-300 mr-3" xmlns="http://www.w3.org/2000/svg" width="16" height="16">
+                                                <path d="m1.999 0 1 2-1 2 2-1 2 1-1-2 1-2-2 1zM11.999 0l1 2-1 2 2-1 2 1-1-2 1-2-2 1zM11.999 10l1 2-1 2 2-1 2 1-1-2 1-2-2 1zM6.292 7.586l2.646-2.647L11.06 7.06 8.413 9.707zM0 13.878l5.586-5.586 2.122 2.121L2.12 16z"/>
+                                            </svg> <span>Read the docs</span> </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!-- Clients -->
+                <section>
+                    <div class="relative max-w-6xl mx-auto px-4 sm:px-6">
+                        <!-- Particles animation -->
+                        <div class="absolute inset-0 max-w-6xl mx-auto px-4 sm:px-6">
+                            <div class="absolute inset-0 -z-10" aria-hidden="true">
+                                <canvas data-particle-animation data-particle-quantity="5"></canvas>
+                            </div>
+                        </div>
+                        <div class="py-12 md:py-16">
+                            <div class="overflow-hidden">
+                                <div class="inline-flex w-full flex-nowrap overflow-hidden [mask-image:_linear-gradient(to_right,transparent_0,_black_128px,_black_calc(100%-128px),transparent_100%)]">
+                                    <ul class="flex animate-infinite-scroll items-center justify-center md:justify-start [&_img]:max-w-none [&_li]:mx-8">
+                                        <li>
+</li>
+                                        <li>
+</li>
+                                        <li>
+                                            <img src="./images/apps.png" alt="founder apps">
+                                        </li>
+                                        <li>
+                                            <img src="./images/frameworks.png" alt="Client 3">
+                                        </li>
+                                        <li>
+                                            <img src="./images/templates.png" alt="Client 4">
+                                        </li>
+                                        <li>
+                                            <img src="./images/courses.png" alt="Client 5">
+                                        </li>
+                                        <li>
+                                            <img src="./images/roadmaps.png" alt="Client 6">
+                                        </li>
+                                        <li>
+                                            <img src="./images/prompts.png" alt="Client 7">
+                                        </li>
+                                        <li>
+                                            <img src="./images/forums.png" alt="Client 8">
+                                        </li>
+                                        <li>
+                                            <img src="./images/books.png" alt="Client 9">
+                                        </li>
+                                    </ul>
+                                    <ul class="flex animate-infinite-scroll items-center justify-center md:justify-start [&_img]:max-w-none [&_li]:mx-8" aria-hidden="true">
+                                        <li>
+                                            <img src="./images/apps.png" alt="Client 1">
+                                        </li>
+                                        <li>
+                                            <img src="./images/frameworks.png" alt="Client 2">
+                                        </li>
+                                        <li>
+                                            <img src="./images/templates.png" alt="Client 3">
+                                        </li>
+                                        <li>
+                                            <img src="./images/courses.png" alt="Client 4">
+                                        </li>
+                                        <li>
+                                            <img src="./images/roadmaps.png" alt="Client 5">
+                                        </li>
+                                        <li>
+                                            <img src="./images/prompts.png" alt="Client 6">
+                                        </li>
+                                        <li>
+                                            <img src="./images/forums.png" alt="Client 7">
+                                        </li>
+                                        <li>
+                                            <img src="./images/books.png" alt="Client 8">
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!-- Features -->
+                <section>
+                    <div class="relative max-w-6xl mx-auto px-4 sm:px-6">
+                        <!-- Illustration -->
+                        <div class="absolute inset-0 -z-10 -mx-28 rounded-t-[3rem] pointer-events-none overflow-hidden" aria-hidden="true">
+                            <div class="absolute left-1/2 -translate-x-1/2 top-0 -z-10">
+                                <img src="./images/glow-top.svg" class="max-w-none" width="1404" height="658" alt="Features Illustration">
+                            </div>
+                        </div>
+                        <div class="pt-16 pb-12 md:pt-52 md:pb-20" style="padding-top: 13px; padding-bottom: 41px; margin-bottom: -62px;">
+                            <div x-data="{ tab: '1' }">
+                                <!-- Section content -->
+                                <div class="max-w-xl mx-auto md:max-w-none flex flex-col md:flex-row md:space-x-8 lg:space-x-16 xl:space-x-20 space-y-8 space-y-reverse md:space-y-0">
+                                    <!-- Content -->
+                                    <div class="md:w-7/12 lg:w-1/2 order-1 md:order-none max-md:text-center" data-aos="fade-down">
+                                        <!-- Original content that will be replaced -->
+                                        <div>
+                                            <div class="inline-flex font-medium bg-clip-text text-transparent bg-linear-to-r from-purple-500 to-purple-200 pb-3">AI First Platform&nbsp;</div>
+                                        </div>
+                                        <h3 class="h3 bg-clip-text text-transparent bg-linear-to-r from-slate-200/60 via-slate-200 to-slate-200/60 pb-3">Simplify Your AI-Powered Business Journey</h3>
+                                        <!-- NEW DYNAMIC DESCRIPTIONS START HERE -->
+                                        <!-- Description for AI-Powered Discovery (Tab 1) -->
+                                        <div x-show="tab === '1'" x-transition:enter="transition ease-out duration-300" x-transition:enter-start="opacity-0 translate-y-2" x-transition:enter-end="opacity-100 translate-y-0" x-transition:leave="transition ease-in duration-300 absolute" x-transition:leave-start="opacity-100 translate-y-0" x-transition:leave-end="opacity-0 -translate-y-2">
+                                            <p class="text-lg text-slate-400 mb-8">Generate, validate, and refine business ideas for new AI-powered ventures, or identify key transformation opportunities within your existing operations. Leverage AI to rapidly test assumptions, analyze market needs, and gain strategic insights.</p>
+                                        </div>
+                                        <!-- Description for Lean Optimization (Tab 2) -->
+                                        <div x-show="tab === '2'" x-transition:enter="transition ease-out duration-300" x-transition:enter-start="opacity-0 translate-y-2" x-transition:enter-end="opacity-100 translate-y-0" x-transition:leave="transition ease-in duration-300 absolute" x-transition:leave-start="opacity-100 translate-y-0" x-transition:leave-end="opacity-0 -translate-y-2">
+                                            <p class="text-lg text-slate-400 mb-8">Build working prototypes, optimize existing processes, and deploy AI-powered solutions with unprecedented efficiency. Utilize no-code/low-code platforms and AI-assisted tools to accelerate your business goals with minimal resources.</p>
+                                        </div>
+                                        <!-- Description for Strategic Impact (Tab 3) -->
+                                        <div x-show="tab === '3'" x-transition:enter="transition ease-out duration-300" x-transition:enter-start="opacity-0 translate-y-2" x-transition:enter-end="opacity-100 translate-y-0" x-transition:leave="transition ease-in duration-300 absolute" x-transition:leave-start="opacity-100 translate-y-0" x-transition:leave-end="opacity-0 -translate-y-2">
+                                            <p class="text-lg text-slate-400 mb-8">Optimize your growth strategy, enhance customer success, and drive fundamental business transformation. AI-driven insights help you scale efficiently and build sustainable competitive advantages across industries.</p>
+                                        </div>
+                                        <!-- NEW DYNAMIC DESCRIPTIONS END HERE -->
+                                        <div class="mt-8 max-w-xs max-md:mx-auto space-y-2">
+                                            <button class="flex items-center text-sm font-medium rounded-sm border w-full px-3 py-2 transition duration-150 ease-in-out hover:opacity-100" :class="tab !== '1' ? 'border-slate-700 opacity-50 text-slate-50' : 'border-purple-700 shadow-sm shadow-purple-500/25 text-purple-300 bg-slate-800/25'" @click.prevent="tab = '1'" style="width: 342px;">
+                                                <svg class="shrink-0 fill-current mr-3" :class="tab !== '1' ? 'text-slate-300' : 'text-purple-400'" xmlns="http://www.w3.org/2000/svg" width="16" height="16">
+                                                    <path d="M14 0a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2h12Zm0 14V2H2v12h12Zm-3-7H5a1 1 0 1 1 0-2h6a1 1 0 0 1 0 2Zm0 4H5a1 1 0 0 1 0-2h6a1 1 0 0 1 0 2Z"/>
+                                                </svg><span style="text-align: left;">AI-Powered Discovery</span>
+                                            </button>
+                                            <button class="flex items-center text-sm font-medium rounded-sm border w-full px-3 py-2 transition duration-150 ease-in-out hover:opacity-100" :class="tab !== '2' ? 'border-slate-700 opacity-50 text-slate-50' : 'border-purple-700 shadow-sm shadow-purple-500/25 text-purple-300 bg-slate-800/25'" @click.prevent="tab = '2'">
+                                                <svg class="shrink-0 fill-current mr-3" :class="tab !== '2' ? 'text-slate-300' : 'text-purple-400'" xmlns="http://www.w3.org/2000/svg" width="16" height="16">
+                                                    <path d="M2 6H0V2a2 2 0 0 1 2-2h4v2H2v4ZM16 6h-2V2h-4V0h4a2 2 0 0 1 2 2v4ZM14 16h-4v-2h4v-4h2v4a2 2 0 0 1-2 2ZM6 16H2a2 2 0 0 1-2-2v-4h2v4h4v2Z"/>
+                                                </svg><span>Lean Optimization</span>
+                                            </button>
+                                            <button class="flex items-center text-sm font-medium rounded-sm border w-full px-3 py-2 transition duration-150 ease-in-out hover:opacity-100" :class="tab !== '3' ? 'border-slate-700 opacity-50 text-slate-50' : 'border-purple-700 shadow-sm shadow-purple-500/25 text-purple-300 bg-slate-800/25'" @click.prevent="tab = '3'">
+                                                <svg class="shrink-0 fill-current mr-3" :class="tab !== '3' ? 'text-slate-300' : 'text-purple-400'" xmlns="http://www.w3.org/2000/svg" width="16" height="16">
+                                                    <path d="M14.3.3c.4-.4 1-.4 1.4 0 .4.4.4 1 0 1.4l-8 8c-.2.2-.4.3-.7.3-.3 0-.5-.1-.7-.3-.4-.4-.4-1 0-1.4l8-8ZM15 7c.6 0 1 .4 1 1 0 4.4-3.6 8-8 8s-8-3.6-8-8 3.6-8 8-8c.6 0 1 .4 1 1s-.4 1-1 1C4.7 2 2 4.7 2 8s2.7 6 6 6 6-2.7 6-6c0-.6.4-1 1-1Z"/>
+                                                </svg><span>Strategic Impact</span>
+                                            </button>                                             
+                                        </div>
+                                    </div>
+                                    <!-- Image -->
+                                    <div class="md:w-5/12 lg:w-1/2" data-aos="fade-up" data-aos-delay="100">
+                                        <div class="relative py-24 -mt-12">
+                                            <!-- Particles animation -->
+                                            <div class="absolute inset-0 -z-10">
+                                                <canvas data-particle-animation data-particle-quantity="8" data-particle-staticity="30"></canvas>
+                                            </div>
+                                            <div class="flex items-center justify-center">
+                                                <div class="relative w-48 h-48 flex justify-center items-center">
+                                                    <!-- Halo effect -->
+                                                    <svg class="absolute inset-0 -z-10 left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 will-change-transform pointer-events-none blur-md" width="480" height="480" viewBox="0 0 480 480" xmlns="http://www.w3.org/2000/svg">
+                                                        <defs>
+                                                            <linearGradient id="pulse-a" x1="50%" x2="50%" y1="100%" y2="0%">
+                                                                <stop offset="0%" stop-color="#A855F7"/>
+                                                                <stop offset="76.382%" stop-color="#FAF5FF"/>
+                                                                <stop offset="100%" stop-color="#6366F1"/>
+                                                            </linearGradient>
+                                                        </defs>
+                                                        <g fill-rule="evenodd">
+                                                            <path class="pulse" fill="url(#pulse-a)" fill-rule="evenodd" d="M240,0 C372.5484,0 480,107.4516 480,240 C480,372.5484 372.5484,480 240,480 C107.4516,480 0,372.5484 0,240 C0,107.4516 107.4516,0 240,0 Z M240,88.8 C156.4944,88.8 88.8,156.4944 88.8,240 C88.8,323.5056 156.4944,391.2 240,391.2 C323.5056,391.2 391.2,323.5056 391.2,240 C391.2,156.4944 323.5056,88.8 240,88.8 Z"></path>
+                                                            <path class="pulse pulse-1" fill="url(#pulse-a)" fill-rule="evenodd" d="M240,0 C372.5484,0 480,107.4516 480,240 C480,372.5484 372.5484,480 240,480 C107.4516,480 0,372.5484 0,240 C0,107.4516 107.4516,0 240,0 Z M240,88.8 C156.4944,88.8 88.8,156.4944 88.8,240 C88.8,323.5056 156.4944,391.2 240,391.2 C323.5056,391.2 391.2,323.5056 391.2,240 C391.2,156.4944 323.5056,88.8 240,88.8 Z"></path>
+                                                            <path class="pulse pulse-2" fill="url(#pulse-a)" fill-rule="evenodd" d="M240,0 C372.5484,0 480,107.4516 480,240 C480,372.5484 372.5484,480 240,480 C107.4516,480 0,372.5484 0,240 C0,107.4516 107.4516,0 240,0 Z M240,88.8 C156.4944,88.8 88.8,156.4944 88.8,240 C88.8,323.5056 156.4944,391.2 240,391.2 C323.5056,391.2 391.2,323.5056 391.2,240 C391.2,156.4944 323.5056,88.8 240,88.8 Z"></path>
+                                                        </g>
+                                                    </svg>
+                                                    <!-- Grid -->
+                                                    <div class="absolute inset-0 -z-10 left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 pointer-events-none w-[500px] h-[500px] rounded-full overflow-hidden [mask-image:_radial-gradient(black,_transparent_60%)]">
+                                                        <div class="h-[200%] animate-endless">
+                                                            <div class="absolute inset-0 [background:repeating-linear-gradient(transparent,transparent_48px,var(--color-white)_48px,var(--color-white)_49px)] blur-[2px] opacity-20"></div>
+                                                            <div class="absolute inset-0 [background:repeating-linear-gradient(transparent,transparent_48px,var(--color-purple-500)_48px,var(--color-purple-500)_49px)]"></div>
+                                                            <div class="absolute inset-0 [background:repeating-linear-gradient(90deg,transparent,transparent_48px,var(--color-white)_48px,var(--color-white)_49px)] blur-[2px] opacity-20"></div>
+                                                            <div class="absolute inset-0 [background:repeating-linear-gradient(90deg,transparent,transparent_48px,var(--color-purple-500)_48px,var(--color-purple-500)_49px)]"></div>
+                                                        </div>
+                                                    </div>
+                                                    <!-- Icons -->
+                                                    <div x-show="tab === '1'" x-transition:enter="transition ease-[cubic-bezier(0.68,-0.3,0.32,1)] duration-700 order-first" x-transition:enter-start="opacity-0 -rotate-[60deg]" x-transition:enter-end="opacity-100 rotate-0" x-transition:leave="transition ease-[cubic-bezier(0.68,-0.3,0.32,1)] duration-700 absolute" x-transition:leave-start="opacity-100 rotate-0" x-transition:leave-end="opacity-0 rotate-[60deg]"> 
+                                                        <div class="relative flex items-center justify-center w-16 h-16 border border-transparent rounded-2xl shadow-2xl -rotate-[14deg] [background:linear-gradient(var(--color-slate-900),var(--color-slate-900))_padding-box,conic-gradient(var(--color-slate-400),var(--color-slate-700)_25%,var(--color-slate-700)_75%,var(--color-slate-400)_100%)_border-box] before:absolute before:inset-0 before:bg-slate-800/30 before:rounded-2xl">
+                                                            <svg class="relative fill-slate-200" xmlns="http://www.w3.org/2000/svg" width="23" height="25">
+                                                                <path fill-rule="nonzero" d="M10.55 15.91H.442L14.153.826 12.856 9.91h10.107L9.253 24.991l1.297-9.082Zm.702-8.919L4.963 13.91h7.893l-.703 4.918 6.289-6.918H10.55l.702-4.918Z"/>
+                                                            </svg>
+                                                        </div>
+                                                    </div>
+                                                    <div x-show="tab === '2'" x-transition:enter="transition ease-[cubic-bezier(0.68,-0.3,0.32,1)] duration-700 order-first" x-transition:enter-start="opacity-0 -rotate-[60deg]" x-transition:enter-end="opacity-100 rotate-0" x-transition:leave="transition ease-[cubic-bezier(0.68,-0.3,0.32,1)] duration-700 absolute" x-transition:leave-start="opacity-100 rotate-0" x-transition:leave-end="opacity-0 rotate-[60deg]"> 
+                                                        <div class="relative flex items-center justify-center w-16 h-16 border border-transparent rounded-2xl shadow-2xl -rotate-[14deg] [background:linear-gradient(var(--color-slate-900),var(--color-slate-900))_padding-box,conic-gradient(var(--color-slate-400),var(--color-slate-700)_25%,var(--color-slate-700)_75%,var(--color-slate-400)_100%)_border-box] before:absolute before:inset-0 before:bg-slate-800/30 before:rounded-2xl">
+                                                            <svg class="relative fill-slate-200" xmlns="http://www.w3.org/2000/svg" width="22" height="22">
+                                                                <path d="M18 14h-2V8h2c2.2 0 4-1.8 4-4s-1.8-4-4-4-4 1.8-4 4v2H8V4c0-2.2-1.8-4-4-4S0 1.8 0 4s1.8 4 4 4h2v6H4c-2.2 0-4 1.8-4 4s1.8 4 4 4 4-1.8 4-4v-2h6v2c0 2.2 1.8 4 4 4s4-1.8 4-4-1.8-4-4-4ZM16 4c0-1.1.9-2 2-2s2 .9 2 2-.9 2-2 2h-2V4ZM2 4c0-1.1.9-2 2-2s2 .9 2 2v2H4c-1.1 0-2-.9-2-2Zm4 14c0 1.1-.9 2-2 2s-2-.9-2-2 .9-2 2-2h2v2ZM8 8h6v6H8V8Zm10 12c-1.1 0-2-.9-2-2v-2h2c1.1 0 2 .9 2 2s-.9 2-2 2Z"/>
+                                                            </svg>
+                                                        </div>
+                                                    </div>
+                                                    <div x-show="tab === '3'" x-transition:enter="transition ease-[cubic-bezier(0.68,-0.3,0.32,1)] duration-700 order-first" x-transition:enter-start="opacity-0 -rotate-[60deg]" x-transition:enter-end="opacity-100 rotate-0" x-transition:leave="transition ease-[cubic-bezier(0.68,-0.3,0.32,1)] duration-700 absolute" x-transition:leave-start="opacity-100 rotate-0" x-transition:leave-end="opacity-0 rotate-[60deg]"> 
+                                                        <div class="relative flex items-center justify-center w-16 h-16 border border-transparent rounded-2xl shadow-2xl -rotate-[14deg] [background:linear-gradient(var(--color-slate-900),var(--color-slate-900))_padding-box,conic-gradient(var(--color-slate-400),var(--color-slate-700)_25%,var(--color-slate-700)_75%,var(--color-slate-400)_100%)_border-box] before:absolute before:inset-0 before:bg-slate-800/30 before:rounded-2xl">
+                                                            <svg class="relative fill-slate-200" xmlns="http://www.w3.org/2000/svg" width="26" height="14">
+                                                                <path fill-rule="nonzero" d="m10 5.414-8 8L.586 12 10 2.586l6 6 8-8L25.414 2 16 11.414z"/>
+                                                            </svg>
+                                                        </div>
+                                                    </div>                                                     
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!-- Features #2 -->
+                <section class="relative">
+                    <!-- Particles animation -->
+                    <div class="absolute left-1/2 -translate-x-1/2 top-0 -z-10 w-80 h-80 -mt-24 -ml-32">
+                        <div class="absolute inset-0 -z-10" aria-hidden="true">
+                            <canvas data-particle-animation data-particle-quantity="6" data-particle-staticity="30"></canvas>
+                        </div>
+                    </div>
+                    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+                        <div class="pt-16 md:pt-32">
+                            <!-- Section header -->
+                            <div class="max-w-3xl mx-auto text-center pb-12 md:pb-20">
+                                <h2 class="h2 bg-clip-text text-transparent bg-linear-to-r from-slate-200/60 via-slate-200 to-slate-200/60 pb-4">Accelerate. Innovate. Transform.</h2>
+                                <p class="text-lg text-slate-400">Leverage the transformative power of AI to compress your time-to-value and achieve efficiencies that were once unimaginable for any size business, across any industry.</p>
+                            </div>
+                            <!-- Highlighted boxes -->
+                            <div class="relative pb-12 md:pb-20">
+                                <!-- Blurred shape -->
+                                <div class="absolute bottom-0 -mb-20 left-1/2 -translate-x-1/2 blur-2xl opacity-50 pointer-events-none" aria-hidden="true">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="434" height="427">
+                                        <defs>
+                                            <linearGradient id="bs2-a" x1="19.609%" x2="50%" y1="14.544%" y2="100%">
+                                                <stop offset="0%" stop-color="#6366F1"/>
+                                                <stop offset="100%" stop-color="#6366F1" stop-opacity="0"/>
+                                            </linearGradient>
+                                        </defs>
+                                        <path fill="url(#bs2-a)" fill-rule="evenodd" d="m346 898 461 369-284 58z" transform="translate(-346 -898)"/>
+                                    </svg>
+                                </div>
+                                <!-- Grid -->
+                                <div class="grid md:grid-cols-12 gap-6 group" data-highlighter>
+                                    <!-- Box #1 -->
+                                    <div class="md:col-span-12" data-aos="fade-down">
+                                        <div class="relative h-full bg-slate-800 rounded-3xl p-px before:absolute before:w-96 before:h-96 before:-left-48 before:-top-48 before:bg-purple-500 before:rounded-full before:opacity-0 before:pointer-events-none before:transition-opacity before:duration-500 before:translate-x-[var(--mouse-x)] before:translate-y-[var(--mouse-y)] hover:before:opacity-20 before:z-30 before:blur-[100px] after:absolute after:inset-0 after:rounded-[inherit] after:opacity-0 after:transition-opacity after:duration-500 after:[background:radial-gradient(250px_circle_at_var(--mouse-x)_var(--mouse-y),var(--color-slate-400),transparent)] group-hover:after:opacity-100 after:z-10 overflow-hidden">
+                                            <div class="relative h-full bg-slate-900 rounded-[inherit] z-20 overflow-hidden">
+                                                <div class="flex flex-col md:flex-row md:items-center md:justify-between">
+                                                    <!-- Blurred shape -->
+                                                    <div class="absolute right-0 top-0 blur-2xl" aria-hidden="true">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="342" height="393">
+                                                            <defs>
+                                                                <linearGradient id="bs-a" x1="19.609%" x2="50%" y1="14.544%" y2="100%">
+                                                                    <stop offset="0%" stop-color="#6366F1"/>
+                                                                    <stop offset="100%" stop-color="#6366F1" stop-opacity="0"/>
+                                                                </linearGradient>
+                                                            </defs>
+                                                            <path fill="url(#bs-a)" fill-rule="evenodd" d="m104 .827 461 369-284 58z" transform="translate(0 -112.827)" opacity=".7"/>
+                                                        </svg>
+                                                    </div>
+                                                    <!-- Radial gradient -->
+                                                    <div class="absolute flex items-center justify-center bottom-0 translate-y-1/2 left-1/2 -translate-x-1/2 pointer-events-none -z-10 h-full aspect-square" aria-hidden="true">
+                                                        <div class="absolute inset-0 translate-z-0 bg-purple-500 rounded-full blur-[120px] opacity-70"></div>
+                                                        <div class="absolute w-1/4 h-1/4 translate-z-0 bg-purple-400 rounded-full blur-[40px]"></div>
+                                                    </div>
+                                                    <!-- Text -->
+                                                    <div class="md:max-w-[480px] shrink-0 order-1 md:order-none p-6 pt-0 md:p-8 md:pr-0">
+                                                        <div class="mb-5">
+                                                            <div>
+                                                                <h3 class="inline-flex text-xl font-bold bg-clip-text text-transparent bg-linear-to-r from-slate-200/60 via-slate-200 to-slate-200/60 pb-1">Rapid Innovation Cycles</h3>
+                                                                <p class="text-slate-400">Go from concept to prototype or process improvement in days, not months, with AI-assisted development and rapid iteration cycles. Ship AI-powered features or optimize workflows faster than ever before.</p>
+                                                            </div>
+                                                        </div>
+                                                        <div><a class="btn-sm text-slate-300 hover:text-white transition duration-150 ease-in-out group [background:linear-gradient(var(--color-slate-900),var(--color-slate-900))_padding-box,conic-gradient(var(--color-slate-400),var(--color-slate-700)_25%,var(--color-slate-700)_75%,var(--color-slate-400)_100%)_border-box] relative before:absolute before:inset-0 before:bg-slate-800/30 before:rounded-full before:pointer-events-none" href="#0"> <span class="relative inline-flex items-center">
+                                                                Learn more <span class="tracking-normal text-purple-500 group-hover:translate-x-0.5 transition-transform duration-150 ease-in-out ml-1">-&gt;</span> </span> </a>
+                                                        </div>
+                                                    </div>
+                                                    <!-- Image -->
+                                                    <div class="relative w-full h-64 md:h-auto overflow-hidden">
+                                                        <img class="absolute bottom-0 left-1/2 -translate-x-1/2 mx-auto max-w-none md:relative md:left-0 md:translate-x-0" src="./images/feature-image-01.svg" width="504" height="400" alt="Feature 01">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Box #2 -->
+                                    <div class="md:col-span-7" data-aos="fade-down">
+                                        <div class="relative h-full bg-slate-800 rounded-3xl p-px before:absolute before:w-96 before:h-96 before:-left-48 before:-top-48 before:bg-purple-500 before:rounded-full before:opacity-0 before:pointer-events-none before:transition-opacity before:duration-500 before:translate-x-[var(--mouse-x)] before:translate-y-[var(--mouse-y)] hover:before:opacity-20 before:z-30 before:blur-[100px] after:absolute after:inset-0 after:rounded-[inherit] after:opacity-0 after:transition-opacity after:duration-500 after:[background:radial-gradient(250px_circle_at_var(--mouse-x)_var(--mouse-y),var(--color-slate-400),transparent)] group-hover:after:opacity-100 after:z-10 overflow-hidden">
+                                            <div class="relative h-full bg-slate-900 rounded-[inherit] z-20 overflow-hidden">
+                                                <div class="flex flex-col">
+                                                    <!-- Radial gradient -->
+                                                    <div class="absolute bottom-0 translate-y-1/2 left-1/2 -translate-x-1/2 pointer-events-none -z-10 w-1/2 aspect-square" aria-hidden="true">
+                                                        <div class="absolute inset-0 translate-z-0 bg-slate-800 rounded-full blur-[80px]"></div>
+                                                    </div>
+                                                    <!-- Text -->
+                                                    <div class="md:max-w-[480px] shrink-0 order-1 md:order-none p-6 pt-0 md:p-8">
+                                                        <div>
+                                                            <h3 class="inline-flex text-xl font-bold bg-clip-text text-transparent bg-linear-to-r from-slate-200/60 via-slate-200 to-slate-200/60 pb-1">Data-Driven Intelligence</h3>
+                                                            <p class="text-slate-400">Gain deeper market insights, validate assumptions, analyze operational data, and understand customer behavior with AI-powered analytics and strategic frameworks. Make informed choices, not guesses.</p>
+                                                        </div>
+                                                    </div>
+                                                    <!-- Image -->
+                                                    <div class="relative w-full h-64 md:h-auto overflow-hidden md:pb-8">
+                                                        <img class="absolute bottom-0 left-1/2 -translate-x-1/2 mx-auto max-w-none md:max-w-full md:relative md:left-0 md:translate-x-0" src="./images/feature-image-02.png" width="536" height="230" alt="Feature 02">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Box #3 -->
+                                    <div class="md:col-span-5" data-aos="fade-down">
+                                        <div class="relative h-full bg-slate-800 rounded-3xl p-px before:absolute before:w-96 before:h-96 before:-left-48 before:-top-48 before:bg-purple-500 before:rounded-full before:opacity-0 before:pointer-events-none before:transition-opacity before:duration-500 before:translate-x-[var(--mouse-x)] before:translate-y-[var(--mouse-y)] hover:before:opacity-20 before:z-30 before:blur-[100px] after:absolute after:inset-0 after:rounded-[inherit] after:opacity-0 after:transition-opacity after:duration-500 after:[background:radial-gradient(250px_circle_at_var(--mouse-x)_var(--mouse-y),var(--color-slate-400),transparent)] group-hover:after:opacity-100 after:z-10 overflow-hidden">
+                                            <div class="relative h-full bg-slate-900 rounded-[inherit] z-20 overflow-hidden">
+                                                <div class="flex flex-col">
+                                                    <!-- Radial gradient -->
+                                                    <div class="absolute bottom-0 translate-y-1/2 left-1/2 -translate-x-1/2 pointer-events-none -z-10 w-1/2 aspect-square" aria-hidden="true">
+                                                        <div class="absolute inset-0 translate-z-0 bg-slate-800 rounded-full blur-[80px]"></div>
+                                                    </div>
+                                                    <!-- Text -->
+                                                    <div class="md:max-w-[480px] shrink-0 order-1 md:order-none p-6 pt-0 md:p-8">
+                                                        <div>
+                                                            <h3 class="inline-flex text-xl font-bold bg-clip-text text-transparent bg-linear-to-r from-slate-200/60 via-slate-200 to-slate-200/60 pb-1">Unprecedented Operational Efficiency</h3>
+                                                            <p class="text-slate-400">Automate repetitive tasks like content creation, research, and data analysis, freeing up your team for strategic thinking, innovation, and high-value customer interactions within your AI-powered business.</p>
+                                                        </div>
+                                                    </div>
+                                                    <!-- Image -->
+                                                    <div class="relative w-full h-64 md:h-auto overflow-hidden md:pb-8">
+                                                        <img class="absolute bottom-0 left-1/2 -translate-x-1/2 mx-auto max-w-none md:max-w-full md:relative md:left-0 md:translate-x-0" src="./images/feature-image-03.png" width="230" height="230" alt="Feature 03">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Features list -->
+                            <div class="grid md:grid-cols-3 gap-8 md:gap-12">
+                                <!-- Feature -->
+                                <div>
+                                    <div class="flex items-center space-x-2 mb-1">
+                                        <svg class="shrink-0 fill-slate-300" xmlns="http://www.w3.org/2000/svg" width="16" height="16">
+                                            <path d="M7.999 2.34a4.733 4.733 0 0 0-6.604 6.778l5.904 5.762a1 1 0 0 0 1.4 0l5.915-5.77a4.733 4.733 0 0 0-6.615-6.77Zm5.208 5.348-5.208 5.079-5.2-5.07a2.734 2.734 0 0 1 3.867-3.864c.182.19.335.404.455.638a1.04 1.04 0 0 0 1.756 0 2.724 2.724 0 0 1 5.122 1.294 2.7 2.7 0 0 1-.792 1.923Z"/>
+                                        </svg>
+                                        <h4 class="font-medium text-slate-50">Adaptable Frameworks</h4>
+                                    </div>
+                                    <p class="text-sm text-slate-400">Apply proven methodologies and prompt engineering techniques that scale effortlessly from solo founders to large teams, ensuring consistent quality and efficiency at every stage of growth or AI transformation.</p>
+                                </div>
+                                <!-- Feature -->
+                                <div>
+                                    <div class="flex items-center space-x-2 mb-1">
+                                        <svg class="shrink-0 fill-slate-300" xmlns="http://www.w3.org/2000/svg" width="16" height="16">
+                                            <path d="M11 0c1.3 0 2.6.5 3.5 1.5 1 .9 1.5 2.2 1.5 3.5 0 1.3-.5 2.6-1.4 3.5l-1.2 1.2c-.2.2-.5.3-.7.3-.2 0-.5-.1-.7-.3-.4-.4-.4-1 0-1.4l1.1-1.2c.6-.5.9-1.3.9-2.1s-.3-1.6-.9-2.2C12 1.7 10 1.7 8.9 2.8L7.7 4c-.4.4-1 .4-1.4 0-.4-.4-.4-1 0-1.4l1.2-1.1C8.4.5 9.7 0 11 0ZM8.3 12c.4-.4 1-.5 1.4-.1.4.4.4 1 0 1.4l-1.2 1.2C7.6 15.5 6.3 16 5 16c-1.3 0-2.6-.5-3.5-1.5C.5 13.6 0 12.3 0 11c0-1.3.5-2.6 1.5-3.5l1.1-1.2c.4-.4 1-.4 1.4 0 .4.4.4 1 0 1.4L2.9 8.9c-.6.5-.9 1.3-.9 2.1s.3 1.6.9 2.2c1.1 1.1 3.1 1.1 4.2 0L8.3 12Zm1.1-6.8c.4-.4 1-.4 1.4 0 .4.4.4 1 0 1.4l-4.2 4.2c-.2.2-.5.3-.7.3-.2 0-.5-.1-.7-.3-.4-.4-.4-1 0-1.4l4.2-4.2Z"/>
+                                        </svg>
+                                        <h4 class="font-medium text-slate-50">Continuous Innovation</h4>
+                                    </div>
+                                    <p class="text-sm text-slate-400">Stay at the forefront of the AI revolution with access to the latest AI capabilities, integration patterns, and emerging technologies that will define tomorrow's AI-powered market leaders across industries.</p>
+                                </div>
+                                <!-- Feature -->
+                                <div>
+                                    <div class="flex items-center space-x-2 mb-1">
+                                        <svg class="shrink-0 fill-slate-300" xmlns="http://www.w3.org/2000/svg" width="16" height="16">
+                                            <path d="M14.3.3c.4-.4 1-.4 1.4 0 .4.4.4 1 0 1.4l-8 8c-.2.2-.4.3-.7.3-.3 0-.5-.1-.7-.3-.4-.4-.4-1 0-1.4l8-8ZM15 7c.6 0 1 .4 1 1 0 4.4-3.6 8-8 8s-8-3.6-8-8 3.6-8 8-8c.6 0 1 .4 1 1s-.4 1-1 1C4.7 2 2 4.7 2 8s2.7 6 6 6 6-2.7 6-6c0-.6.4-1 1-1Z"/>
+                                        </svg>
+                                        <h4 class="font-medium text-slate-50">Global Reach & Agility</h4>
+                                    </div>
+                                    <p class="text-sm text-slate-400">Architect your AI-powered business for worldwide reach from day one, or transform existing operations for global competitiveness, with insights into diverse markets and scalable AI infrastructure.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!-- Features #3 -->
+                <section class="relative">
+                    <!-- Blurred shape -->
+                    <div class="absolute top-0 -translate-y-1/4 left-1/2 -translate-x-1/2 blur-2xl opacity-50 pointer-events-none -z-10" aria-hidden="true">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="434" height="427">
+                            <defs>
+                                <linearGradient id="bs3-a" x1="19.609%" x2="50%" y1="14.544%" y2="100%">
+                                    <stop offset="0%" stop-color="#6366F1"/>
+                                    <stop offset="100%" stop-color="#6366F1" stop-opacity="0"/>
+                                </linearGradient>
+                            </defs>
+                            <path fill="url(#bs3-a)" fill-rule="evenodd" d="m410 0 461 369-284 58z" transform="matrix(1 0 0 -1 -410 427)"/>
+                        </svg>
+                    </div>
+                    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+                        <div class="py-12 md:py-20">
+                            <!-- Section header -->
+                            <div class="max-w-3xl mx-auto text-center pb-12 md:pb-20">
+                                <div>
+                                    <div class="inline-flex font-medium bg-clip-text text-transparent bg-linear-to-r from-purple-500 to-purple-200 pb-3">Latest Publications</div>
+                                </div>
+                                <h2 class="h2 bg-clip-text text-transparent bg-linear-to-r from-slate-200/60 via-slate-200 to-slate-200/60 pb-4">Level Up Your AI Startup Skills</h2>
+                                <p class="text-lg text-slate-400">From foundational concepts to advanced execution, our curated collection offers courses, guides, and frameworks designed to accelerate your success with unprecedented speed and efficiency.</p>
+                            </div>
+                            <!-- Books grid -->
+                            <div class="grid md:grid-cols-2 gap-8 mb-12">
+                                <!-- Book 1 -->
+                                <div class="relative bg-slate-800 rounded-3xl p-8 overflow-hidden group">
+                                    <div class="absolute inset-0 bg-gradient-to-br from-purple-500/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                                    <div class="relative z-10">
+                                        <div class="flex items-start space-x-6">
+                                            <div class="flex-shrink-0">
+                                                <img src="./images/smart-start-book.jpg" alt="Smart Start Book" class="w-24 h-32 object-cover rounded-lg shadow-lg">
+                                            </div>
+                                            <div>
+                                                <h3 class="text-xl font-bold text-white mb-2">SMART START</h3>
+                                                <p class="text-purple-300 font-medium mb-2">Fast-Track Your Startup in 60 Days with AI</p>
+                                                <p class="text-slate-400 text-sm mb-4">Master AI-first fast validation techniques that significantly compress time-to-market while maximizing your chances of success in today's competitive landscape.</p><a href="books.html" class="text-purple-400 hover:text-purple-300 font-medium inline-flex items-center group">
+                                                    Learn More <span class="ml-2 group-hover:translate-x-0.5 transition-transform">→</span> </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Book 2 -->
+                                <div class="relative bg-slate-800 rounded-3xl p-8 overflow-hidden group">
+                                    <div class="absolute inset-0 bg-gradient-to-br from-purple-500/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                                    <div class="relative z-10">
+                                        <div class="flex items-start space-x-6">
+                                            <div class="flex-shrink-0">
+                                                <img src="./images/ai-startup-launchpad-book.jpg" alt="AI Startup LaunchPad Book" class="w-24 h-32 object-cover rounded-lg shadow-lg">
+                                            </div>
+                                            <div>
+                                                <h3 class="text-xl font-bold text-white mb-2">AI STARTUP LAUNCHPAD</h3>
+                                                <p class="text-purple-300 font-medium mb-2">About Sprint</p>
+                                                <p class="text-slate-400 text-sm mb-4">Transform your ideas into thriving AI-powered businesses with proven frameworks and actionable strategies for modern entrepreneurs.</p><a href="books.html" class="text-purple-400 hover:text-purple-300 font-medium inline-flex items-center group">
+                                                    Learn More <span class="ml-2 group-hover:translate-x-0.5 transition-transform">→</span> </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- CTA -->
+                            <div class="text-center"><a href="books.html" class="btn text-slate-900 bg-linear-to-r from-white/80 via-white to-white/80 hover:bg-white transition duration-150 ease-in-out group">
+                                    Explore All Publications <span class="tracking-normal text-purple-500 group-hover:translate-x-0.5 transition-transform duration-150 ease-in-out ml-1">→</span> </a>
+                            </div>
+                        </div>
+                        <div class="py-12 md:py-20">
+                            <!-- Section header -->
+                            <div class="max-w-3xl mx-auto text-center pb-12 md:pb-20">
+                                <div>
+                                    <div class="inline-flex font-medium bg-clip-text text-transparent bg-linear-to-r from-purple-500 to-purple-200 pb-3">Comprehensive Learning</div>
+                                </div>
+                                <h2 class="h2 bg-clip-text text-transparent bg-linear-to-r from-slate-200/60 via-slate-200 to-slate-200/60 pb-4">AI-Powered Courses & Training</h2>
+                                <p class="text-lg text-slate-400">Go beyond the book with hands-on learning through AI techniques and business strategies for founders.</p>
+                            </div>
+                            <!-- Courses grid -->
+                            <div class="grid md:grid-cols-2 gap-8 mb-12">
+                                <!-- Course 1 -->
+                                <div class="relative bg-slate-800 rounded-3xl p-8 overflow-hidden group">
+                                    <div class="absolute inset-0 bg-gradient-to-br from-blue-500/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                                    <div class="relative z-10">
+                                        <div class="mb-4">
+                                            <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-blue-500/20 text-blue-300">Available June 5th</span>
+                                        </div>
+                                        <h3 class="text-xl font-bold text-white mb-3">Advanced Prompt Engineering Course for Business Leaders</h3>
+                                        <p class="text-slate-400 text-sm mb-6">Master the complete business toolkit to create your business, integrate AI, revolutionize operations, and drive growth through strategic prompt engineering.</p>
+                                        <div class="space-y-2 mb-6">
+                                            <div class="flex items-center text-sm text-slate-300">
+                                                <svg class="w-4 h-4 mr-2 text-green-400" fill="currentColor" viewBox="0 0 20 20">
+                                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                                                </svg>
+                                                Strategic AI Integration Frameworks
+                                            </div>
+                                            <div class="flex items-center text-sm text-slate-300">
+                                                <svg class="w-4 h-4 mr-2 text-green-400" fill="currentColor" viewBox="0 0 20 20">
+                                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                                                </svg>
+                                                Advanced Prompt Engineering Techniques
+                                            </div>
+                                            <div class="flex items-center text-sm text-slate-300">
+                                                <svg class="w-4 h-4 mr-2 text-green-400" fill="currentColor" viewBox="0 0 20 20">
+                                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                                                </svg>
+                                                Real-world Business Applications
+                                            </div>
+                                        </div>
+                                        <a href="courses.html" class="text-blue-400 hover:text-blue-300 font-medium inline-flex items-center group">
+                                            Explore Course <span class="ml-2 group-hover:translate-x-0.5 transition-transform">→</span> </a>
+                                    </div>
+                                </div>
+                                <!-- Course 2 -->
+                                <div class="relative bg-slate-800 rounded-3xl p-8 overflow-hidden group">
+                                    <div class="absolute inset-0 bg-gradient-to-br from-green-500/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                                    <div class="relative z-10">
+                                        <div class="mb-4">
+                                            <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-green-500/20 text-green-300">Available June 5th</span>
+                                        </div>
+                                        <h3 class="text-xl font-bold text-white mb-3">Prompt Engineering Course for Professionals</h3>
+                                        <p class="text-slate-400 text-sm mb-6">From basic concepts to advanced business applications, master the art and science of effective AI communication for professional success.</p>
+                                        <div class="space-y-2 mb-6">
+                                            <div class="flex items-center text-sm text-slate-300">
+                                                <svg class="w-4 h-4 mr-2 text-green-400" fill="currentColor" viewBox="0 0 20 20">
+                                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                                                </svg>
+                                                Fundamentals to Advanced Techniques
+                                            </div>
+                                            <div class="flex items-center text-sm text-slate-300">
+                                                <svg class="w-4 h-4 mr-2 text-green-400" fill="currentColor" viewBox="0 0 20 20">
+                                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                                                </svg>
+                                                Professional Workflow Integration
+                                            </div>
+                                            <div class="flex items-center text-sm text-slate-300">
+                                                <svg class="w-4 h-4 mr-2 text-green-400" fill="currentColor" viewBox="0 0 20 20">
+                                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                                                </svg>
+                                                Hands-on Practical Exercises
+                                            </div>
+                                        </div>
+                                        <a href="courses.html" class="text-green-400 hover:text-green-300 font-medium inline-flex items-center group">
+                                            Explore Course <span class="ml-2 group-hover:translate-x-0.5 transition-transform">→</span> </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- CTA -->
+                            <div class="text-center">
+                                <a href="courses.html" class="btn text-slate-900 bg-linear-to-r from-white/80 via-white to-white/80 hover:bg-white transition duration-150 ease-in-out group">
+                                    View All Courses <span class="tracking-normal text-purple-500 group-hover:translate-x-0.5 transition-transform duration-150 ease-in-out ml-1">→</span> </a>
+                            </div>
+                        </div>
+                        <div class="py-12 md:py-20">
+                            <!-- Section header -->
+                            <div class="max-w-3xl mx-auto text-center pb-12 md:pb-20">
+                                <div>
+                                    <div class="inline-flex font-medium bg-clip-text text-transparent bg-linear-to-r from-purple-500 to-purple-200 pb-3">Complete Toolkit</div>
+                                </div>
+                                <h2 class="h2 bg-clip-text text-transparent bg-linear-to-r from-slate-200/60 via-slate-200 to-slate-200/60 pb-4">AI Startup LaunchPad Toolkit</h2>
+                                <p class="text-lg text-slate-400">Everything you need to execute your AI-powered business vision. From strategic planning to operational execution, our comprehensive toolkit provides templates, frameworks, and actionable guidance.</p>
+                            </div>
+                            <!-- Toolkit features -->
+                            <div class="grid md:grid-cols-2 gap-12 items-center mb-16">
+                                <!-- Content -->
+                                <div>
+                                    <h3 class="text-2xl font-bold text-white mb-6">Resources for Execution</h3>
+                                    <div class="space-y-6">
+                                        <div class="flex items-start space-x-4">
+                                            <div class="flex-shrink-0 w-8 h-8 bg-purple-500 rounded-lg flex items-center justify-center">
+                                                <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+                                                </svg>
+                                            </div>
+                                            <div>
+                                                <h4 class="font-semibold text-white mb-2">Strategic Planning Templates</h4>
+                                                <p class="text-slate-400 text-sm">Business model canvas, competitive analysis frameworks, and market research templates optimized for AI-powered ventures.</p>
+                                            </div>
+                                        </div>
+                                        <div class="flex items-start space-x-4">
+                                            <div class="flex-shrink-0 w-8 h-8 bg-blue-500 rounded-lg flex items-center justify-center">
+                                                <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v10a2 2 0 002 2h8a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"></path>
+                                                </svg>
+                                            </div>
+                                            <div>
+                                                <h4 class="font-semibold text-white mb-2">Execution Checklists</h4>
+                                                <p class="text-slate-400 text-sm">Step-by-step checklists for product development, market validation, team building, and scaling operations.</p>
+                                            </div>
+                                        </div>
+                                        <div class="flex items-start space-x-4">
+                                            <div class="flex-shrink-0 w-8 h-8 bg-green-500 rounded-lg flex items-center justify-center">
+                                                <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path>
+                                                </svg>
+                                            </div>
+                                            <div>
+                                                <h4 class="font-semibold text-white mb-2">Financial Models & Calculators</h4>
+                                                <p class="text-slate-400 text-sm">Revenue projections, funding calculators, and financial planning tools specifically designed for AI-powered businesses.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Image placeholder -->
+                                <div class="relative">
+                                    <div class="bg-gradient-to-br from-purple-500/20 to-blue-500/20 rounded-2xl p-8 backdrop-blur-sm border border-slate-700">
+                                        <div class="grid grid-cols-2 gap-4">
+                                            <div class="bg-slate-800 rounded-lg p-4 text-center">
+                                                <div class="w-8 h-8 bg-purple-500 rounded-lg mx-auto mb-2"></div>
+                                                <p class="text-xs text-slate-400">Templates</p>
+                                            </div>
+                                            <div class="bg-slate-800 rounded-lg p-4 text-center">
+                                                <div class="w-8 h-8 bg-blue-500 rounded-lg mx-auto mb-2"></div>
+                                                <p class="text-xs text-slate-400">Checklists</p>
+                                            </div>
+                                            <div class="bg-slate-800 rounded-lg p-4 text-center">
+                                                <div class="w-8 h-8 bg-green-500 rounded-lg mx-auto mb-2"></div>
+                                                <p class="text-xs text-slate-400">Calculators</p>
+                                            </div>
+                                            <div class="bg-slate-800 rounded-lg p-4 text-center">
+                                                <div class="w-8 h-8 bg-orange-500 rounded-lg mx-auto mb-2"></div>
+                                                <p class="text-xs text-slate-400">Frameworks</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- CTA -->
+                            <div class="text-center"><a href="toolkit.html" class="btn text-slate-900 bg-linear-to-r from-white/80 via-white to-white/80 hover:bg-white transition duration-150 ease-in-out group">
+                                    Access Complete Toolkit <span class="tracking-normal text-purple-500 group-hover:translate-x-0.5 transition-transform duration-150 ease-in-out ml-1">→</span> </a>
+                            </div>
+                        </div>                         
+                        <div class="pt-12 md:pt-20">
+                            <!-- Section header -->
+                            <div class="max-w-3xl mx-auto text-center pb-12 md:pb-20">
+                                <div>
+                                    <div class="inline-flex font-medium bg-clip-text text-transparent bg-linear-to-r from-purple-500 to-purple-200 pb-3">Explore Our Signature Programs</div>
+                                </div>
+                                <h2 class="h2 bg-clip-text text-transparent bg-linear-to-r from-slate-200/60 via-slate-200 to-slate-200/60 pb-4">Whether you're launching a new AI-powered venture or transforming an existing business, Smart Start offers structured programs and resources tailored to your specific goals.</h2>
+                                <p class="text-lg text-slate-400">All the lorem ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet.</p>
+                            </div>
+                            <div class="max-w-3xl mx-auto">
+                                <div data-aos="fade-down">
+                                    <div class="group" data-highlighter>
+                                        <div class="relative bg-slate-800 rounded-3xl p-px before:absolute before:w-96 before:h-96 before:-left-48 before:-top-48 before:bg-purple-500 before:rounded-full before:opacity-0 before:pointer-events-none before:transition-opacity before:duration-500 before:translate-x-[var(--mouse-x)] before:translate-y-[var(--mouse-y)] hover:before:opacity-20 before:z-30 before:blur-[100px] after:absolute after:inset-0 after:rounded-[inherit] after:opacity-0 after:transition-opacity after:duration-500 after:[background:radial-gradient(250px_circle_at_var(--mouse-x)_var(--mouse-y),var(--color-slate-400),transparent)] group-hover:after:opacity-100 after:z-10 overflow-hidden">
+                                            <div class="relative h-full bg-slate-900 rounded-[inherit] z-20 overflow-hidden">
+                                                <!-- Radial gradient -->
+                                                <div class="absolute bottom-0 translate-y-1/2 left-1/2 -translate-x-1/2 pointer-events-none -z-10 w-1/2 aspect-square" aria-hidden="true">
+                                                    <div class="absolute inset-0 translate-z-0 bg-purple-500 rounded-full blur-[120px]"></div>
+                                                </div>
+                                                <img src="./images/feature-image-04.png" width="768" height="400" alt="Feature 04">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!-- Testimonials carousel -->
+                <section> 
+                    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+                        <div class="pt-12 md:pt-20">
+                            <!-- Section header -->
+                            <div class="max-w-3xl mx-auto text-center pb-12 md:pb-20">
+                                <div>
+                                    <div class="inline-flex font-medium bg-clip-text text-transparent bg-linear-to-r from-purple-500 to-purple-200 pb-3">Why Smart Start?</div>
+                                </div>
+                                <h2 class="h2 bg-clip-text text-transparent bg-linear-to-r from-slate-200/60 via-slate-200 to-slate-200/60 pb-4">Your AI-Powered Advantage.</h2>
+                                <p class="text-lg text-slate-400">In a world where AI defines competitive edge, Smart Start provides the specialized knowledge and tools to ensure your business isn't just launched, but transformed and optimized for sustainable success as an AI-powered entity against any competition, in any industry.</p>
+                            </div>
+                            <!-- Carousel built with Swiper.js [https://swiperjs.com/] -->
+                            <!-- * Initialized in src/js/main.js -->
+                            <!-- * Custom styles in src/css/additional-styles/theme.scss -->
+                            <div class="relative before:absolute before:inset-0 before:-translate-x-full before:z-20 before:bg-linear-to-l before:from-transparent before:to-slate-900 before:to-20% after:absolute after:inset-0 after:translate-x-full after:z-20 after:bg-linear-to-r after:from-transparent before:to-slate-900 after:to-20%">
+                                <div class="stellar-carousel swiper-container group">
+                                    <div class="swiper-wrapper w-fit" data-highlighter>
+                                        <!-- Carousel items -->
+                                        <div class="swiper-slide h-auto relative bg-slate-800 rounded-3xl p-px before:absolute before:w-96 before:h-96 before:-left-48 before:-top-48 before:bg-purple-500 before:rounded-full before:opacity-0 before:pointer-events-none before:transition-opacity before:duration-500 before:translate-x-[var(--mouse-x)] before:translate-y-[var(--mouse-y)] hover:before:opacity-20 before:z-30 before:blur-[100px] after:absolute after:inset-0 after:rounded-[inherit] after:opacity-0 after:transition-opacity after:duration-500 after:[background:radial-gradient(250px_circle_at_var(--mouse-x)_var(--mouse-y),var(--color-slate-400),transparent)] group-hover:after:opacity-100 after:z-10 overflow-hidden group/slide">
+                                            <div class="relative h-full bg-slate-900 rounded-[inherit] z-20 overflow-hidden">
+                                                <!-- Particles animation -->
+                                                <div class="absolute inset-0 -z-10 opacity-0 group-[.swiper-slide-active]/slide:opacity-100 group-hover/slide:opacity-100 transition-opacity duration-500 ease-in-out" aria-hidden="true">
+                                                    <canvas data-particle-animation data-particle-quantity="3"></canvas>
+                                                </div>                                                 
+                                                <!-- Radial gradient -->
+                                                <div class="absolute bottom-0 translate-y-1/2 left-1/2 -translate-x-1/2 pointer-events-none -z-10 w-1/3 aspect-square" aria-hidden="true">
+                                                    <div class="absolute inset-0 translate-z-0 rounded-full bg-slate-800 group-[.swiper-slide-active]/slide:bg-purple-500 transition-colors duration-500 ease-in-out blur-[60px]"></div>
+                                                </div>
+                                                <div class="flex flex-col p-6 h-full">
+                                                    <img class="mb-3" src="./images/carousel-icon-01.svg" width="56" height="56" alt="Icon 01">
+                                                    <div class="grow">
+                                                        <div class="font-bold text-lg mb-1">AI-Native Methodologies</div>
+                                                        <div class="text-slate-400 mb-3">Every framework, tool, and strategy is designed for AI-first businesses or AI-driven transformation, empowering you to build truly intelligent products and operations.</div>
+                                                    </div>
+                                                    <div class="text-right"><a class="text-sm font-medium text-slate-300 hover:text-white inline-flex items-center transition duration-150 ease-in-out group" href="#0">Learn More <span class="tracking-normal text-purple-500 group-hover:translate-x-0.5 transition-transform duration-150 ease-in-out ml-1">-&gt;</span></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>                                         
+                                        <div class="swiper-slide h-auto relative bg-slate-800 rounded-3xl p-px before:absolute before:w-96 before:h-96 before:-left-48 before:-top-48 before:bg-purple-500 before:rounded-full before:opacity-0 before:pointer-events-none before:transition-opacity before:duration-500 before:translate-x-[var(--mouse-x)] before:translate-y-[var(--mouse-y)] hover:before:opacity-20 before:z-30 before:blur-[100px] after:absolute after:inset-0 after:rounded-[inherit] after:opacity-0 after:transition-opacity after:duration-500 after:[background:radial-gradient(250px_circle_at_var(--mouse-x)_var(--mouse-y),var(--color-slate-400),transparent)] group-hover:after:opacity-100 after:z-10 overflow-hidden group/slide">
+                                            <div class="relative h-full bg-slate-900 rounded-[inherit] z-20 overflow-hidden">
+                                                <!-- Particles animation -->
+                                                <div class="absolute inset-0 -z-10 opacity-0 group-[.swiper-slide-active]/slide:opacity-100 group-hover/slide:opacity-100 transition-opacity duration-500 ease-in-out" aria-hidden="true">
+                                                    <canvas data-particle-animation data-particle-quantity="3"></canvas>
+                                                </div>                                                 
+                                                <!-- Radial gradient -->
+                                                <div class="absolute bottom-0 translate-y-1/2 left-1/2 -translate-x-1/2 pointer-events-none -z-10 w-1/3 aspect-square" aria-hidden="true">
+                                                    <div class="absolute inset-0 translate-z-0 rounded-full bg-slate-800 group-[.swiper-slide-active]/slide:bg-purple-500 transition-colors duration-500 ease-in-out blur-[60px]"></div>
+                                                </div>
+                                                <div class="flex flex-col p-6 h-full">
+                                                    <img class="mb-3" src="./images/carousel-icon-02.svg" width="56" height="56" alt="Icon 01">
+                                                    <div class="grow">
+                                                        <div class="font-bold text-lg mb-1">Lean & Optimized Approach</div>
+                                                        <div class="text-slate-400 mb-3">Learn to build sustainable AI-powered ventures or optimize existing operations without massive capital or large teams, leveraging AI to amplify your resources and maximize impact per dollar.</div>
+                                                    </div>
+                                                    <div class="text-right"><a class="text-sm font-medium text-slate-300 hover:text-white inline-flex items-center transition duration-150 ease-in-out group" href="#0">Learn More <span class="tracking-normal text-purple-500 group-hover:translate-x-0.5 transition-transform duration-150 ease-in-out ml-1">-&gt;</span></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide h-auto relative bg-slate-800 rounded-3xl p-px before:absolute before:w-96 before:h-96 before:-left-48 before:-top-48 before:bg-purple-500 before:rounded-full before:opacity-0 before:pointer-events-none before:transition-opacity before:duration-500 before:translate-x-[var(--mouse-x)] before:translate-y-[var(--mouse-y)] hover:before:opacity-20 before:z-30 before:blur-[100px] after:absolute after:inset-0 after:rounded-[inherit] after:opacity-0 after:transition-opacity after:duration-500 after:[background:radial-gradient(250px_circle_at_var(--mouse-x)_var(--mouse-y),var(--color-slate-400),transparent)] group-hover:after:opacity-100 after:z-10 overflow-hidden group/slide">
+                                            <div class="relative h-full bg-slate-900 rounded-[inherit] z-20 overflow-hidden">
+                                                <!-- Particles animation -->
+                                                <div class="absolute inset-0 -z-10 opacity-0 group-[.swiper-slide-active]/slide:opacity-100 group-hover/slide:opacity-100 transition-opacity duration-500 ease-in-out" aria-hidden="true">
+                                                    <canvas data-particle-animation data-particle-quantity="3"></canvas>
+                                                </div>                                                 
+                                                <!-- Radial gradient -->
+                                                <div class="absolute bottom-0 translate-y-1/2 left-1/2 -translate-x-1/2 pointer-events-none -z-10 w-1/3 aspect-square" aria-hidden="true">
+                                                    <div class="absolute inset-0 translate-z-0 rounded-full bg-slate-800 group-[.swiper-slide-active]/slide:bg-purple-500 transition-colors duration-500 ease-in-out blur-[60px]"></div>
+                                                </div>
+                                                <div class="flex flex-col p-6 h-full">
+                                                    <img class="mb-3" src="./images/carousel-icon-03.svg" width="56" height="56" alt="Icon 01">
+                                                    <div class="grow">
+                                                        <div class="font-bold text-lg mb-1">Accelerated Results</div>
+                                                        <div class="text-slate-400 mb-3">Follow proven roadmaps and implement AI strategies to achieve tangible business outcomes in weeks, not years, compressing traditional development or transformation timelines for AI-powered growth.</div>
+                                                    </div>
+                                                    <div class="text-right"><a class="text-sm font-medium text-slate-300 hover:text-white inline-flex items-center transition duration-150 ease-in-out group" href="#0">Learn More <span class="tracking-normal text-purple-500 group-hover:translate-x-0.5 transition-transform duration-150 ease-in-out ml-1">-&gt;</span></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide h-auto relative bg-slate-800 rounded-3xl p-px before:absolute before:w-96 before:h-96 before:-left-48 before:-top-48 before:bg-purple-500 before:rounded-full before:opacity-0 before:pointer-events-none before:transition-opacity before:duration-500 before:translate-x-[var(--mouse-x)] before:translate-y-[var(--mouse-y)] hover:before:opacity-20 before:z-30 before:blur-[100px] after:absolute after:inset-0 after:rounded-[inherit] after:opacity-0 after:transition-opacity after:duration-500 after:[background:radial-gradient(250px_circle_at_var(--mouse-x)_var(--mouse-y),var(--color-slate-400),transparent)] group-hover:after:opacity-100 after:z-10 overflow-hidden group/slide">
+                                            <div class="relative h-full bg-slate-900 rounded-[inherit] z-20 overflow-hidden">
+                                                <!-- Particles animation -->
+                                                <div class="absolute inset-0 -z-10 opacity-0 group-[.swiper-slide-active]/slide:opacity-100 group-hover/slide:opacity-100 transition-opacity duration-500 ease-in-out" aria-hidden="true">
+                                                    <canvas data-particle-animation data-particle-quantity="3"></canvas>
+                                                </div>                                                 
+                                                <!-- Radial gradient -->
+                                                <div class="absolute bottom-0 translate-y-1/2 left-1/2 -translate-x-1/2 pointer-events-none -z-10 w-1/3 aspect-square" aria-hidden="true">
+                                                    <div class="absolute inset-0 translate-z-0 rounded-full bg-slate-800 group-[.swiper-slide-active]/slide:bg-purple-500 transition-colors duration-500 ease-in-out blur-[60px]"></div>
+                                                </div>
+                                                <div class="flex flex-col p-6 h-full">
+                                                    <img class="mb-3" src="./images/carousel-icon-04.svg" width="56" height="56" alt="Icon 01">
+                                                    <div class="grow">
+                                                        <div class="font-bold text-lg mb-1">Actionable & Practical</div>
+                                                        <div class="text-slate-400 mb-3">Get step-by-step guidance, real-world case studies from diverse industries, and immediately actionable templates, enabling direct impact on your AI-powered business today.</div>
+                                                    </div>
+                                                    <div class="text-right"><a class="text-sm font-medium text-slate-300 hover:text-white inline-flex items-center transition duration-150 ease-in-out group" href="#0">Learn More <span class="tracking-normal text-purple-500 group-hover:translate-x-0.5 transition-transform duration-150 ease-in-out ml-1">-&gt;</span></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide h-auto relative bg-slate-800 rounded-3xl p-px before:absolute before:w-96 before:h-96 before:-left-48 before:-top-48 before:bg-purple-500 before:rounded-full before:opacity-0 before:pointer-events-none before:transition-opacity before:duration-500 before:translate-x-[var(--mouse-x)] before:translate-y-[var(--mouse-y)] hover:before:opacity-20 before:z-30 before:blur-[100px] after:absolute after:inset-0 after:rounded-[inherit] after:opacity-0 after:transition-opacity after:duration-500 after:[background:radial-gradient(250px_circle_at_var(--mouse-x)_var(--mouse-y),var(--color-slate-400),transparent)] group-hover:after:opacity-100 after:z-10 overflow-hidden group/slide">
+                                            <div class="relative h-full bg-slate-900 rounded-[inherit] z-20 overflow-hidden">
+                                                <!-- Particles animation -->
+                                                <div class="absolute inset-0 -z-10 opacity-0 group-[.swiper-slide-active]/slide:opacity-100 group-hover/slide:opacity-100 transition-opacity duration-500 ease-in-out" aria-hidden="true">
+                                                    <canvas data-particle-animation data-particle-quantity="3"></canvas>
+                                                </div>
+                                                <!-- Radial gradient -->
+                                                <div class="absolute bottom-0 translate-y-1/2 left-1/2 -translate-x-1/2 pointer-events-none -z-10 w-1/3 aspect-square" aria-hidden="true">
+                                                    <div class="absolute inset-0 translate-z-0 rounded-full bg-slate-800 group-[.swiper-slide-active]/slide:bg-purple-500 transition-colors duration-500 ease-in-out blur-[60px]"></div>
+                                                </div>
+                                                <div class="flex flex-col p-6 h-full">
+                                                    <img class="mb-3" src="./images/carousel-icon-05.svg" width="56" height="56" alt="Icon 05">
+                                                    <div class="grow">
+                                                        <div class="font-bold text-lg mb-1">Global Scalability & Adaptability</div>
+                                                        <div class="text-slate-400 mb-3">Architect your AI-powered business for worldwide reach from day one, or transform existing operations for global competitiveness, with insights into diverse markets and scalable AI infrastructure.</div>
+                                                    </div>
+                                                    <div class="text-right"><a class="text-sm font-medium text-slate-300 hover:text-white inline-flex items-center transition duration-150 ease-in-out group" href="#0">Learn More <span class="tracking-normal text-purple-500 group-hover:translate-x-0.5 transition-transform duration-150 ease-in-out ml-1">-&gt;</span></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Arrows -->
+                                <div class="flex mt-8 justify-end">
+                                    <button class="carousel-prev relative z-20 w-12 h-12 flex items-center justify-center group"><span class="sr-only">Previous</span>
+                                        <svg class="w-4 h-4 fill-slate-500 group-hover:fill-purple-500 transition duration-150 ease-in-out" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M6.7 14.7l1.4-1.4L3.8 9H16V7H3.8l4.3-4.3-1.4-1.4L0 8z"/>
+                                        </svg>
+                                    </button>
+                                    <button class="carousel-next relative z-20 w-12 h-12 flex items-center justify-center group"><span class="sr-only">Next</span>
+                                        <svg class="w-4 h-4 fill-slate-500 group-hover:fill-purple-500 transition duration-150 ease-in-out" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M9.3 14.7l-1.4-1.4L12.2 9H0V7h12.2L7.9 2.7l1.4-1.4L16 8z"/>
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!-- Pricing -->
+                <section class="relative">
+                    <!-- Radial gradient -->
+                    <div class="absolute inset-0 overflow-hidden pointer-events-none -z-10" aria-hidden="true">
+                        <div class="absolute flex items-center justify-center top-0 -translate-y-1/2 left-1/2 -translate-x-1/2 w-1/3 aspect-square">
+                            <div class="absolute inset-0 translate-z-0 bg-purple-500 rounded-full blur-[120px] opacity-50"></div>
+                        </div>
+                    </div>
+                    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+                        <div class="py-12 md:py-20">
+                            <!-- Content -->
+                            <div class="max-w-3xl mx-auto text-center pb-12 md:pb-20">
+                                <div>
+                                    <div class="inline-flex font-medium bg-clip-text text-transparent bg-linear-to-r from-purple-500 to-purple-200 pb-3">Pricing plans</div>
+                                </div>
+                                <h2 class="h2 bg-clip-text text-transparent bg-linear-to-r from-slate-200/60 via-slate-200 to-slate-200/60 pb-4">Flexible plans for your AI-powered journey</h2>
+                                <p class="text-lg text-slate-400">Choose the plan that best fits your ambitions, whether you're launching a new AI-powered venture, transforming an existing business, or scaling your AI capabilities.</p>
+                            </div>
+                            <!-- Pricing tabs -->
+                            <div class="relative">
+                                <!-- Blurred shape -->
+                                <div class="max-md:hidden absolute bottom-0 -mb-20 left-2/3 -translate-x-1/2 blur-2xl opacity-70 pointer-events-none" aria-hidden="true">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="434" height="427">
+                                        <defs>
+                                            <linearGradient id="bs5-a" x1="19.609%" x2="50%" y1="14.544%" y2="100%">
+                                                <stop offset="0%" stop-color="#A855F7"/>
+                                                <stop offset="100%" stop-color="#6366F1" stop-opacity="0"/>
+                                            </linearGradient>
+                                        </defs>
+                                        <path fill="url(#bs5-a)" fill-rule="evenodd" d="m661 736 461 369-284 58z" transform="matrix(1 0 0 -1 -661 1163)"/>
+                                    </svg>
+                                </div>
+                                <!-- Content -->
+                                <div class="grid md:grid-cols-4 xl:-mx-6 text-sm [&>div:nth-of-type(-n+4)]:py-6 [&>div:nth-last-of-type(-n+4)]:pb-6 max-md:[&>div:nth-last-of-type(-n+4)]:mb-8 max-md:[&>div:nth-of-type(-n+4):nth-of-type(n+1)]:rounded-t-3xl max-md:[&>div:nth-last-of-type(-n+4)]:rounded-b-3xl md:[&>div:nth-of-type(2)]:rounded-tl-3xl md:[&>div:nth-of-type(4)]:rounded-tr-3xl md:[&>div:nth-last-of-type(3)]:rounded-bl-3xl md:[&>div:nth-last-of-type(1)]:rounded-br-3xl [&>div]:bg-slate-700/20 [&>div:nth-of-type(4n+1)]:bg-transparent max-md:[&>div:nth-of-type(4n+5)]:hidden max-md:[&>div:nth-of-type(4n+2)]:order-1 max-md:[&>div:nth-of-type(4n+3)]:order-2 max-md:[&>div:nth-of-type(4n+4)]:order-3 max-md:md:[&>div:nth-of-type(n)]:mb-0 [&>div:nth-of-type(4n+3)]:relative [&>div:nth-of-type(4n+3)]:before:absolute [&>div:nth-of-type(4n+3)]:before:-inset-px [&>div:nth-of-type(4n+3)]:before:rounded-[inherit] [&>div:nth-of-type(4n+3)]:before:border-x-2 [&>div:nth-of-type(3)]:before:border-t-2 [&>div:nth-last-of-type(2)]:before:border-b-2 [&>div:nth-of-type(4n+3)]:before:border-purple-500 [&>div:nth-of-type(4n+3)]:before:-z-10 [&>div:nth-of-type(4n+3)]:before:pointer-events-none" x-data="{ annual: true }">
+                                    <!-- Pricing toggle -->
+                                    <div class="px-6 flex flex-col justify-end">
+                                        <div class="pb-5 md:border-b border-slate-800">
+                                            <!-- Toggle switch -->
+                                            <div class="max-md:text-center">
+                                                <div class="inline-flex items-center whitespace-nowrap">
+                                                    <div class="text-sm text-slate-500 font-medium mr-2 md:max-lg:hidden">Monthly</div>
+                                                    <div class="relative">
+                                                        <input type="checkbox" id="toggle" class="peer sr-only" x-model="annual"/>
+                                                        <label for="toggle" class="relative flex h-6 w-11 cursor-pointer items-center rounded-full bg-slate-400 px-0.5 outline-slate-400 transition-colors before:h-5 before:w-5 before:rounded-full before:bg-white before:shadow-xs before:transition-transform before:duration-150 peer-checked:bg-purple-500 peer-checked:before:translate-x-full peer-focus-visible:outline peer-focus-visible:outline-offset-2 peer-focus-visible:outline-gray-400 peer-focus-visible:peer-checked:outline-purple-500"><span class="sr-only">Pay Yearly</span>
+                                                        </label>
+                                                    </div>
+                                                    <div class="text-sm text-slate-500 font-medium ml-2">Yearly <span class="text-teal-500">(-20%)</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Pro price -->
+                                    <div class="px-6 flex flex-col justify-end">
+                                        <div class="grow pb-4 mb-4 border-b border-slate-800">
+                                            <div class="text-base font-medium bg-clip-text text-transparent bg-linear-to-r from-purple-500 to-purple-200 pb-0.5">AI-Powered Pro</div>
+                                            <div class="mb-1"><span class="text-lg font-medium text-slate-500">$</span>
+                                                <span class="text-3xl font-bold text-slate-50" x-text="annual ? '24' : '29'">24</span>
+                                                <span class="text-sm text-slate-600 font-medium">/mo</span>
+                                            </div>
+                                            <div class="text-slate-500">Accelerate your individual AI-powered journey.</div>
+                                        </div>
+                                        <div class="pb-4 border-b border-slate-800"><a class="btn-sm text-slate-900 bg-linear-to-r from-white/80 via-white to-white/80 hover:bg-white w-full transition duration-150 ease-in-out group" href="#0">
+                                                    Get Started <span class="tracking-normal text-purple-500 group-hover:translate-x-0.5 transition-transform duration-150 ease-in-out ml-1">-&gt;</span> </a>
+                                        </div>
+                                    </div>
+                                    <!-- Team price -->
+                                    <div class="px-6 flex flex-col justify-end">
+                                        <div class="grow pb-4 mb-4 border-b border-slate-800">
+                                            <div class="text-base font-medium bg-clip-text text-transparent bg-linear-to-r from-purple-500 to-purple-200 pb-0.5">AI-Powered Team</div>
+                                            <div class="mb-1"><span class="text-lg font-medium text-slate-500">$</span>
+                                                <span class="text-3xl font-bold text-slate-50" x-text="annual ? '49' : '54'">49</span>
+                                                <span class="text-sm text-slate-600 font-medium">/mo</span>
+                                            </div>
+                                            <div class="text-slate-500">Transform your business with collaborative AI-power.</div>
+                                        </div>
+                                        <div class="pb-4 border-b border-slate-800"><a class="btn-sm text-white bg-purple-500 hover:bg-purple-600 w-full transition duration-150 ease-in-out group" href="#0">
+                                                    Get Started <span class="tracking-normal text-purple-300 group-hover:translate-x-0.5 transition-transform duration-150 ease-in-out ml-1">-&gt;</span> </a>
+                                        </div>
+                                    </div>
+                                    <!-- Enterprise price -->
+                                    <div class="px-6 flex flex-col justify-end">
+                                        <div class="grow pb-4 mb-4 border-b border-slate-800">
+                                            <div class="text-base font-medium bg-clip-text text-transparent bg-linear-to-r from-purple-500 to-purple-200 pb-0.5">AI-Powered Enterprise</div>
+                                            <div class="mb-1"><span class="text-lg font-medium text-slate-500">$</span>
+                                                <span class="text-3xl font-bold text-slate-50" x-text="annual ? '79' : '85'">79</span>
+                                                <span class="text-sm text-slate-600 font-medium">/mo</span>
+                                            </div>
+                                            <div class="text-slate-500">Scale your AI-powered operations with full support.</div>
+                                        </div>
+                                        <div class="pb-4 border-b border-slate-800"><a class="btn-sm text-slate-900 bg-linear-to-r from-white/80 via-white to-white/80 hover:bg-white w-full transition duration-150 ease-in-out group" href="#0">
+                                                    Get Started <span class="tracking-normal text-purple-500 group-hover:translate-x-0.5 transition-transform duration-150 ease-in-out ml-1">-&gt;</span> </a>
+                                        </div>
+                                    </div>
+                                    <!-- # Usage -->
+                                    <div class="px-6 flex flex-col justify-end">
+                                        <div class="py-2 text-slate-50 font-medium mt-4">Core Program Access</div>
+                                    </div>
+                                    <div class="px-6 flex flex-col justify-end">
+                                        <div class="py-2 text-slate-50 font-medium mt-4 md:hidden">Core Program Access</div>
+                                    </div>
+                                    <div class="px-6 flex flex-col justify-end">
+                                        <div class="py-2 text-slate-50 font-medium mt-4 md:hidden">Core Program Access</div>
+                                    </div>
+                                    <div class="px-6 flex flex-col justify-end">
+                                        <div class="py-2 text-slate-50 font-medium mt-4 md:hidden">Core Program Access</div>
+                                    </div>
+                                    <!-- 60-Day AI-Powered Launchpad -->
+                                    <div class="px-6 flex flex-col justify-end">
+                                        <div class="py-2 text-slate-400 border-b border-slate-800">60-Day AI-Powered Launchpad</div>
+                                    </div>
+                                    <div class="px-6 flex flex-col justify-end">
+                                        <div class="flex items-center h-full border-b border-slate-800 py-2 text-slate-400">
+                                            <svg class="shrink-0 fill-purple-500 mr-3" xmlns="http://www.w3.org/2000/svg" width="12" height="9">
+                                                <path d="M10.28.28 3.989 6.575 1.695 4.28A1 1 0 0 0 .28 5.695l3 3a1 1 0 0 0 1.414 0l7-7A1 1 0 0 0 10.28.28Z"/>
+                                            </svg><span>Full Access <span class="md:hidden">60-Day AI-Powered Launchpad</span></span>
+                                        </div>
+                                    </div>
+                                    <div class="px-6 flex flex-col justify-end">
+                                        <div class="flex items-center h-full border-b border-slate-800 py-2 text-slate-400">
+                                            <svg class="shrink-0 fill-purple-500 mr-3" xmlns="http://www.w3.org/2000/svg" width="12" height="9">
+                                                <path d="M10.28.28 3.989 6.575 1.695 4.28A1 1 0 0 0 .28 5.695l3 3a1 1 0 0 0 1.414 0l7-7A1 1 0 0 0 10.28.28Z"/>
+                                            </svg><span>Full Access <span class="md:hidden">60-Day AI-Powered Launchpad</span></span>
+                                        </div>
+                                    </div>
+                                    <div class="px-6 flex flex-col justify-end">
+                                        <div class="flex items-center h-full border-b border-slate-800 py-2 text-slate-400">
+                                            <svg class="shrink-0 fill-purple-500 mr-3" xmlns="http://www.w3.org/2000/svg" width="12" height="9">
+                                                <path d="M10.28.28 3.989 6.575 1.695 4.28A1 1 0 0 0 .28 5.695l3 3a1 1 0 0 0 1.414 0l7-7A1 1 0 0 0 10.28.28Z"/>
+                                            </svg><span>Full Access <span class="md:hidden">60-Day AI-Powered Launchpad</span></span>
+                                        </div>
+                                    </div>
+                                    <!-- AI Business Transformation Playbook -->
+                                    <div class="px-6 flex flex-col justify-end">
+                                        <div class="py-2 text-slate-400 border-b border-slate-800">AI Business Transformation Playbook</div>
+                                    </div>
+                                    <div class="px-6 flex flex-col justify-end">
+                                        <div class="flex items-center border-b border-slate-800 py-2 text-slate-400 max-md:hidden"><span></span>
+                                        </div>
+                                    </div>
+                                    <div class="px-6 flex flex-col justify-end">
+                                        <div class="flex items-center h-full border-b border-slate-800 py-2 text-slate-400">
+                                            <svg class="shrink-0 fill-purple-500 mr-3" xmlns="http://www.w3.org/2000/svg" width="12" height="9">
+                                                <path d="M10.28.28 3.989 6.575 1.695 4.28A1 1 0 0 0 .28 5.695l3 3a1 1 0 0 0 1.414 0l7-7A1 1 0 0 0 10.28.28Z"/>
+                                            </svg><span>Full Access <span class="md:hidden">AI Business Transformation Playbook</span></span>
+                                        </div>
+                                    </div>
+                                    <div class="px-6 flex flex-col justify-end">
+                                        <div class="flex items-center h-full border-b border-slate-800 py-2 text-slate-400">
+                                            <svg class="shrink-0 fill-purple-500 mr-3" xmlns="http://www.w3.org/2000/svg" width="12" height="9">
+                                                <path d="M10.28.28 3.989 6.575 1.695 4.28A1 1 0 0 0 .28 5.695l3 3a1 1 0 0 0 1.414 0l7-7A1 1 0 0 0 10.28.28Z"/>
+                                            </svg><span>Full Access <span class="md:hidden">AI Business Transformation Playbook</span></span>
+                                        </div>
+                                    </div>
+                                    <!-- Advanced Prompt Engineering Academy -->
+                                    <div class="px-6 flex flex-col justify-end">
+                                        <div class="py-2 text-slate-400 border-b border-slate-800">Advanced Prompt Engineering Academy</div>
+                                    </div>
+                                    <div class="px-6 flex flex-col justify-end">
+                                        <div class="flex items-center border-b border-slate-800 py-2 text-slate-400 max-md:hidden"><span></span>
+                                        </div>
+                                    </div>
+                                    <div class="px-6 flex flex-col justify-end">
+                                        <div class="flex items-center border-b border-slate-800 py-2 text-slate-400 max-md:hidden"><span></span>
+                                        </div>
+                                    </div>
+                                    <div class="px-6 flex flex-col justify-end">
+                                        <div class="flex items-center h-full border-b border-slate-800 py-2 text-slate-400">
+                                            <svg class="shrink-0 fill-purple-500 mr-3" xmlns="http://www.w3.org/2000/svg" width="12" height="9">
+                                                <path d="M10.28.28 3.989 6.575 1.695 4.28A1 1 0 0 0 .28 5.695l3 3a1 1 0 0 0 1.414 0l7-7A1 1 0 0 0 10.28.28Z"/>
+                                            </svg><span>Full Access <span class="md:hidden">Advanced Prompt Engineering Academy</span></span>
+                                        </div>
+                                    </div>
+                                    <!-- # Features -->
+                                    <div class="px-6 flex flex-col justify-end">
+                                        <div class="py-2 text-slate-50 font-medium mt-4">Key Features</div>
+                                    </div>
+                                    <div class="px-6 flex flex-col justify-end">
+                                        <div class="py-2 text-slate-50 font-medium mt-4 md:hidden">Key Features</div>
+                                    </div>
+                                    <div class="px-6 flex flex-col justify-end">
+                                        <div class="py-2 text-slate-50 font-medium mt-4 md:hidden">Key Features</div>
+                                    </div>
+                                    <div class="px-6 flex flex-col justify-end">
+                                        <div class="py-2 text-slate-50 font-medium mt-4 md:hidden">Key Features</div>
+                                    </div>
+                                    <!-- Curated AI Tool Directory -->
+                                    <div class="px-6 flex flex-col justify-end">
+                                        <div class="py-2 text-slate-400 border-b border-slate-800">Curated AI Tool Directory</div>
+                                    </div>
+                                    <div class="px-6 flex flex-col justify-end">
+                                        <div class="flex items-center h-full border-b border-slate-800 py-2 text-slate-400">
+                                            <svg class="shrink-0 fill-purple-500 mr-3" xmlns="http://www.w3.org/2000/svg" width="12" height="9">
+                                                <path d="M10.28.28 3.989 6.575 1.695 4.28A1 1 0 0 0 .28 5.695l3 3a1 1 0 0 0 1.414 0l7-7A1 1 0 0 0 10.28.28Z"/>
+                                            </svg><span><span class="md:hidden">Curated AI Tool Directory</span></span>
+                                        </div>
+                                    </div>
+                                    <div class="px-6 flex flex-col justify-end">
+                                        <div class="flex items-center h-full border-b border-slate-800 py-2 text-slate-400">
+                                            <svg class="shrink-0 fill-purple-500 mr-3" xmlns="http://www.w3.org/2000/svg" width="12" height="9">
+                                                <path d="M10.28.28 3.989 6.575 1.695 4.28A1 1 0 0 0 .28 5.695l3 3a1 1 0 0 0 1.414 0l7-7A1 1 0 0 0 10.28.28Z"/>
+                                            </svg><span><span class="md:hidden">Curated AI Tool Directory</span></span>
+                                        </div>
+                                    </div>
+                                    <div class="px-6 flex flex-col justify-end">
+                                        <div class="flex items-center h-full border-b border-slate-800 py-2 text-slate-400">
+                                            <svg class="shrink-0 fill-purple-500 mr-3" xmlns="http://www.w3.org/2000/svg" width="12" height="9">
+                                                <path d="M10.28.28 3.989 6.575 1.695 4.28A1 1 0 0 0 .28 5.695l3 3a1 1 0 0 0 1.414 0l7-7A1 1 0 0 0 10.28.28Z"/>
+                                            </svg><span><span class="md:hidden">Curated AI Tool Directory</span></span>
+                                        </div>
+                                    </div>
+                                    <!-- Exclusive Resource Library -->
+                                    <div class="px-6 flex flex-col justify-end">
+                                        <div class="py-2 text-slate-400 border-b border-slate-800">Exclusive Resource Library</div>
+                                    </div>
+                                    <div class="px-6 flex flex-col justify-end">
+                                        <div class="flex items-center h-full border-b border-slate-800 py-2 text-slate-400">
+                                            <svg class="shrink-0 fill-purple-500 mr-3" xmlns="http://www.w3.org/2000/svg" width="12" height="9">
+                                                <path d="M10.28.28 3.989 6.575 1.695 4.28A1 1 0 0 0 .28 5.695l3 3a1 1 0 0 0 1.414 0l7-7A1 1 0 0 0 10.28.28Z"/>
+                                            </svg><span><span class="md:hidden">Exclusive Resource Library</span></span>
+                                        </div>
+                                    </div>
+                                    <div class="px-6 flex flex-col justify-end">
+                                        <div class="flex items-center h-full border-b border-slate-800 py-2 text-slate-400">
+                                            <svg class="shrink-0 fill-purple-500 mr-3" xmlns="http://www.w3.org/2000/svg" width="12" height="9">
+                                                <path d="M10.28.28 3.989 6.575 1.695 4.28A1 1 0 0 0 .28 5.695l3 3a1 1 0 0 0 1.414 0l7-7A1 1 0 0 0 10.28.28Z"/>
+                                            </svg><span><span class="md:hidden">Exclusive Resource Library</span></span>
+                                        </div>
+                                    </div>
+                                    <div class="px-6 flex flex-col justify-end">
+                                        <div class="flex items-center h-full border-b border-slate-800 py-2 text-slate-400">
+                                            <svg class="shrink-0 fill-purple-500 mr-3" xmlns="http://www.w3.org/2000/svg" width="12" height="9">
+                                                <path d="M10.28.28 3.989 6.575 1.695 4.28A1 1 0 0 0 .28 5.695l3 3a1 1 0 0 0 1.414 0l7-7A1 1 0 0 0 10.28.28Z"/>
+                                            </svg><span><span class="md:hidden">Exclusive Resource Library</span></span>
+                                        </div>
+                                    </div>
+                                    <!-- Priority Community Access -->
+                                    <div class="px-6 flex flex-col justify-end">
+                                        <div class="py-2 text-slate-400 border-b border-slate-800">Priority Community Access</div>
+                                    </div>
+                                    <div class="px-6 flex flex-col justify-end">
+                                        <div class="flex items-center border-b border-slate-800 py-2 text-slate-400 max-md:hidden"><span></span>
+                                        </div>
+                                    </div>
+                                    <div class="px-6 flex flex-col justify-end">
+                                        <div class="flex items-center h-full border-b border-slate-800 py-2 text-slate-400">
+                                            <svg class="shrink-0 fill-purple-500 mr-3" xmlns="http://www.w3.org/2000/svg" width="12" height="9">
+                                                <path d="M10.28.28 3.989 6.575 1.695 4.28A1 1 0 0 0 .28 5.695l3 3a1 1 0 0 0 1.414 0l7-7A1 1 0 0 0 10.28.28Z"/>
+                                            </svg><span><span class="md:hidden">Priority Community Access</span></span>
+                                        </div>
+                                    </div>
+                                    <div class="px-6 flex flex-col justify-end">
+                                        <div class="flex items-center h-full border-b border-slate-800 py-2 text-slate-400">
+                                            <svg class="shrink-0 fill-purple-500 mr-3" xmlns="http://www.w3.org/2000/svg" width="12" height="9">
+                                                <path d="M10.28.28 3.989 6.575 1.695 4.28A1 1 0 0 0 .28 5.695l3 3a1 1 0 0 0 1.414 0l7-7A1 1 0 0 0 10.28.28Z"/>
+                                            </svg><span><span class="md:hidden">Priority Community Access</span></span>
+                                        </div>
+                                    </div>
+                                    <!-- Live Expert Q&A Sessions -->
+                                    <div class="px-6 flex flex-col justify-end">
+                                        <div class="py-2 text-slate-400 border-b border-slate-800">Live Expert Q&A Sessions</div>
+                                    </div>
+                                    <div class="px-6 flex flex-col justify-end">
+                                        <div class="flex items-center border-b border-slate-800 py-2 text-slate-400 max-md:hidden"><span></span>
+                                        </div>
+                                    </div>
+                                    <div class="px-6 flex flex-col justify-end">
+                                        <div class="flex items-center h-full border-b border-slate-800 py-2 text-slate-400">
+                                            <svg class="shrink-0 fill-purple-500 mr-3" xmlns="http://www.w3.org/2000/svg" width="12" height="9">
+                                                <path d="M10.28.28 3.989 6.575 1.695 4.28A1 1 0 0 0 .28 5.695l3 3a1 1 0 0 0 1.414 0l7-7A1 1 0 0 0 10.28.28Z"/>
+                                            </svg><span>Weekly <span class="md:hidden">Live Expert Q&A Sessions</span></span>
+                                        </div>
+                                    </div>
+                                    <div class="px-6 flex flex-col justify-end">
+                                        <div class="flex items-center h-full border-b border-slate-800 py-2 text-slate-400">
+                                            <svg class="shrink-0 fill-purple-500 mr-3" xmlns="http://www.w3.org/2000/svg" width="12" height="9">
+                                                <path d="M10.28.28 3.989 6.575 1.695 4.28A1 1 0 0 0 .28 5.695l3 3a1 1 0 0 0 1.414 0l7-7A1 1 0 0 0 10.28.28Z"/>
+                                            </svg><span>Weekly <span class="md:hidden">Live Expert Q&A Sessions</span></span>
+                                        </div>
+                                    </div>
+                                    <!-- Personalized Coaching -->
+                                    <div class="px-6 flex flex-col justify-end">
+                                        <div class="py-2 text-slate-400 border-b border-slate-800">Personalized Coaching</div>
+                                    </div>
+                                    <div class="px-6 flex flex-col justify-end">
+                                        <div class="flex items-center border-b border-slate-800 py-2 text-slate-400 max-md:hidden"><span></span>
+                                        </div>
+                                    </div>
+                                    <div class="px-6 flex flex-col justify-end">
+                                        <div class="flex items-center border-b border-slate-800 py-2 text-slate-400 max-md:hidden"><span></span>
+                                        </div>
+                                    </div>
+                                    <div class="px-6 flex flex-col justify-end">
+                                        <div class="flex items-center h-full border-b border-slate-800 py-2 text-slate-400">
+                                            <svg class="shrink-0 fill-purple-500 mr-3" xmlns="http://www.w3.org/2000/svg" width="12" height="9">
+                                                <path d="M10.28.28 3.989 6.575 1.695 4.28A1 1 0 0 0 .28 5.695l3 3a1 1 0 0 0 1.414 0l7-7A1 1 0 0 0 10.28.28Z"/>
+                                            </svg><span>Included <span class="md:hidden">Personalized Coaching</span></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                </section>
+                <!-- Testimonials -->
+                <section>
+                    <div class="max-w-3xl mx-auto px-4 sm:px-6">
+                        <div class="relative pb-12 md:pb-20">
+                            <!-- Particles animation -->
+                            <div class="absolute left-1/2 -translate-x-1/2 top-0 -z-10 w-80 h-80 -mt-6">
+                                <div class="absolute inset-0 -z-10" aria-hidden="true">
+                                    <canvas data-particle-animation data-particle-quantity="10" data-particle-staticity="30"></canvas>
+                                </div>
+                            </div>
+                            <!-- Carousel -->
+                            <div class="text-center" x-data="carousel">
+                                <!-- Testimonial image -->
+                                <div class="relative h-32 [mask-image:linear-gradient(0deg,transparent,var(--color-white)_40%,var(--color-white))]">
+                                    <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[480px] h-[480px] -z-10 pointer-events-none before:rounded-full rounded-full before:absolute before:inset-0 before:bg-linear-to-b before:from-slate-400/20 before:to-transparent before:to-20% after:rounded-full after:absolute after:inset-0 after:bg-slate-900 after:m-px before:-z-20 after:-z-20">
+                                        <!-- Alpine.js template for testimonial images: https://github.com/alpinejs/alpine#x-for -->
+                                        <template x-for="(item, index) in items" :key="index">
+                                            <div x-show="active === index" class="absolute inset-0 -z-10" x-transition:enter="transition ease-[cubic-bezier(0.68,-0.3,0.32,1)] duration-700 order-first" x-transition:enter-start="opacity-0 -rotate-[60deg]" x-transition:enter-end="opacity-100 rotate-0" x-transition:leave="transition ease-[cubic-bezier(0.68,-0.3,0.32,1)] duration-700" x-transition:leave-start="opacity-100 rotate-0" x-transition:leave-end="opacity-0 rotate-[60deg]">
+                                                <img class="relative top-11 left-1/2 -translate-x-1/2 rounded-full" :src="item.img" width="56" height="56" :alt="item.name">
+                                            </div>
+                                        </template>                                         
+                                    </div>
+                                </div>
+                                <!-- Text -->
+                                <div class="mb-10">
+                                    <div class="relative flex flex-col transition-all duration-150 delay-300 ease-in-out" x-ref="testimonials">
+                                        <!-- Alpine.js template for testimonials: https://github.com/alpinejs/alpine#x-for -->
+                                        <template x-for="(item, index) in items" :key="index">
+                                            <div x-show="active === index" x-transition:enter="transition ease-in-out duration-500 delay-200 order-first" x-transition:enter-start="opacity-0 -translate-x-4" x-transition:enter-end="opacity-100 translate-x-0" x-transition:leave="transition ease-out duration-300 delay-300 absolute" x-transition:leave-start="opacity-100 translate-x-0" x-transition:leave-end="opacity-0 translate-x-4">
+                                                <div class="text-xl font-bold bg-clip-text text-transparent bg-linear-to-r from-slate-200/60 via-slate-200 to-slate-200/60" x-text="item.quote"></div>
+                                            </div>
+                                        </template>
+                                    </div>
+                                </div>
+                                <!-- Buttons -->
+                                <div class="flex flex-wrap justify-center -m-1.5">
+                                    <!-- Alpine.js template for buttons: https://github.com/alpinejs/alpine#x-for -->
+                                    <template x-for="(item, index) in items" :key="index">
+                                        <button class="btn-sm m-1.5 text-xs py-1.5 text-slate-300 transition duration-150 ease-in-out [background:linear-gradient(var(--color-slate-900),var(--color-slate-900))_padding-box,conic-gradient(var(--color-slate-400),var(--color-slate-700)_25%,var(--color-slate-700)_75%,var(--color-slate-400)_100%)_border-box] relative before:absolute before:inset-0 before:bg-slate-800/30 before:rounded-full before:pointer-events-none" :class="active === index ? 'opacity-100' : 'opacity-30 hover:opacity-60'" @click="active = index; stopAutorotate();"><span class="relative"> <span class="text-slate-50" x-text="item.name"></span> <span class="text-slate-600">-</span> <span x-text="item.role"></span> </span>
+                                        </button>
+                                    </template>
+                                </div>
+                            </div>
+                            <!-- Carousel data and functionality: https://github.com/alpinejs/alpine -->
+                            <script>
+                                        document.addEventListener('alpine:init', () => {
+                                            Alpine.data('carousel', () => ({
+                                                active: 0,
+                                                autorotate: true,
+                                                autorotateTiming: 7000,
+                                                items: [
+                                                    {
+                                                        img: './images/testimonial-01.jpg',
+                                                        quote: "Smart Start's AI-powered frameworks helped me launch my new venture in just 50 days! The actionable guidance and community support were game-changers.",
+                                                        name: 'Sam K.',
+                                                        role: 'AI Startup Founder'
+                                                    },
+                                                    {
+                                                        img: './images/testimonial-02.jpg',
+                                                        quote: "We integrated AI across our operations following Smart Start's playbook. Our efficiency improved by 35%, and we're now competing at a whole new level.",
+                                                        name: 'Mark L.',
+                                                        role: 'Small Business CEO'
+                                                    },
+                                                    {
+                                                        img: './images/testimonial-03.jpg',
+                                                        quote: "Mastering prompt engineering through Smart Start has boosted my productivity by 40% daily. My AI-powered business now achieves results I never thought possible.",
+                                                        name: 'James C.',
+                                                        role: 'Consultant & AI-Powered Entrepreneur'
+                                                    },
+                                                ],
+                                                init() {
+                                                    if (this.autorotate) {
+                                                        this.autorotateInterval = setInterval(() => {
+                                                            this.active = this.active + 1 === this.items.length ? 0 : this.active + 1
+                                                        }, this.autorotateTiming)
+                                                    }
+                                                    this.$watch('active', callback => this.heightFix())
+                                                },
+                                                stopAutorotate() {
+                                                    clearInterval(this.autorotateInterval)
+                                                    this.autorotateInterval = null
+                                                },
+                                                heightFix() {
+                                                    this.$nextTick(() => {
+                                                        this.$refs.testimonials.style.height = this.$refs.testimonials.children[this.active + 1].offsetHeight + 'px'
+                                                    })
+                                                }
+                                            }))
+                                        })
+                                    </script>
+                        </div>
+                    </div>
+                </section>
+                <!-- CTA -->
+                <section>
+                    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+                        <div class="relative px-8 py-12 md:py-20 rounded-[3rem] overflow-hidden">
+                            <!-- Radial gradient -->
+                            <div class="absolute flex items-center justify-center top-0 -translate-y-1/2 left-1/2 -translate-x-1/2 pointer-events-none -z-10 w-1/3 aspect-square" aria-hidden="true">
+                                <div class="absolute inset-0 translate-z-0 bg-purple-500 rounded-full blur-[120px] opacity-70"></div>
+                                <div class="absolute w-1/4 h-1/4 translate-z-0 bg-purple-400 rounded-full blur-[40px]"></div>
+                            </div>
+                            <!-- Blurred shape -->
+                            <div class="absolute bottom-0 translate-y-1/2 left-0 blur-2xl opacity-50 pointer-events-none -z-10" aria-hidden="true">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="434" height="427">
+                                    <defs>
+                                        <linearGradient id="bs5-a" x1="19.609%" x2="50%" y1="14.544%" y2="100%">
+                                            <stop offset="0%" stop-color="#A855F7"/>
+                                            <stop offset="100%" stop-color="#6366F1" stop-opacity="0"/>
+                                        </linearGradient>
+                                    </defs>
+                                    <path fill="url(#bs5-a)" fill-rule="evenodd" d="m0 0 461 369-284 58z" transform="matrix(1 0 0 -1 0 427)"/>
+                                </svg>
+                            </div>
+                            <!-- Content -->
+                            <div class="max-w-3xl mx-auto text-center">
+                                <div>
+                                    <div class="inline-flex font-medium bg-clip-text text-transparent bg-linear-to-r from-purple-500 to-purple-200 pb-3">Launch or Transform</div>
+                                </div>
+                                <h2 class="h2 bg-clip-text text-transparent bg-linear-to-r from-slate-200/60 via-slate-200 to-slate-200/60 pb-4">Take control of your AI-powered business</h2>
+                                <p class="text-lg text-slate-400 mb-8">Ready to build a new AI-powered venture or strategically transform your existing operations? Our programs, tools, and community are designed to accelerate your success.</p>
+                                <div><a class="btn text-slate-900 bg-linear-to-r from-white/80 via-white to-white/80 hover:bg-white transition duration-150 ease-in-out group" href="#0">
+                                                Get Started <span class="tracking-normal text-purple-500 group-hover:translate-x-0.5 transition-transform duration-150 ease-in-out ml-1">-&gt;</span> </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>                 
+            </main>
+            <!-- Site footer -->
+            <footer>
+                <div class="max-w-6xl mx-auto px-4 sm:px-6">
+                    <!-- Blocks -->
+                    <div class="grid sm:grid-cols-12 gap-8 py-8 md:py-12">
+                        <!-- 1st block -->
+                        <div class="sm:col-span-12 lg:col-span-4 order-1 lg:order-none">
+                            <div class="h-full flex flex-col sm:flex-row lg:flex-col justify-between">
+                                <div class="mb-4 sm:mb-0">
+                                    <div class="mb-4">
+                                        <!-- Logo -->
+                                        <a class="inline-flex" href="index.html" aria-label="AI Business LaunchPad"> <img src="./images/aistartuplaunchpadlogolight.svg" width="100" height="38" alt="AI Business LaunchPad"> </a>
+                                    </div>
+                                    <div class="text-sm text-slate-300">&copy; <span class="text-slate-500">AI Business LaunchPad</span> - All rights reserved.
+                                    </div>
+                                </div>
+                                <!-- Social links -->
+                                <ul class="flex">
+                                    <li><a class="flex justify-center items-center text-purple-500 hover:text-purple-400 transition duration-150 ease-in-out" href="#0" aria-label="Twitter"> <svg class="w-8 h-8 fill-current" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="m13.063 9 3.495 4.475L20.601 9h2.454l-5.359 5.931L24 23h-4.938l-3.866-4.893L10.771 23H8.316l5.735-6.342L8 9h5.063Zm-.74 1.347h-1.457l8.875 11.232h1.36l-8.778-11.232Z"/>
+                                            </svg> </a>
+                                    </li>
+                                    <li class="ml-2"><a class="flex justify-center items-center text-purple-500 hover:text-purple-400 transition duration-150 ease-in-out" href="#0" aria-label="LinkedIn"> <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32">
+                                                <path class="w-8 h-8 fill-current" d="M12.29 14.3a.69.69 0 0 0-.416-.155h-.623v3.727h.623a.689.689 0 0 0 .416-.156.543.543 0 0 0 .21-.466v-2.488a.547.547 0 0 0-.21-.462ZM22.432 8H9.568C8.704 8 8.002 8.7 8 9.564v12.872A1.568 1.568 0 0 0 9.568 24h12.864c.864 0 1.566-.7 1.568-1.564V9.564A1.568 1.568 0 0 0 22.432 8Zm-8.925 9.257a1.631 1.631 0 0 1-1.727 1.687h-1.657v-5.909h1.692a1.631 1.631 0 0 1 1.692 1.689v2.533ZM17.1 14.09h-1.9v1.372h1.163v1.057H15.2v1.371h1.9v1.056h-2.217a.72.72 0 0 1-.74-.7v-4.471a.721.721 0 0 1 .7-.739H17.1v1.054Zm3.7 4.118c-.471 1.1-1.316.88-1.694 0l-1.372-5.172H18.9l1.058 4.064 1.056-4.062h1.164l-1.378 5.17Z"/>
+                                            </svg> </a>
+                                    </li>
+                                    <li class="ml-2"><a class="flex justify-center items-center text-purple-500 hover:text-purple-400 transition duration-150 ease-in-out" href="#0" aria-label="Github"> <svg class="w-8 h-8 fill-current" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M16 8.2c-4.4 0-8 3.6-8 8 0 3.5 2.3 6.5 5.5 7.6.4.1.5-.2.5-.4V22c-2.2.5-2.7-1-2.7-1-.4-.9-.9-1.2-.9-1.2-.7-.5.1-.5.1-.5.8.1 1.2.8 1.2.8.7 1.3 1.9.9 2.3.7.1-.5.3-.9.5-1.1-1.8-.2-3.6-.9-3.6-4 0-.9.3-1.6.8-2.1-.1-.2-.4-1 .1-2.1 0 0 .7-.2 2.2.8.6-.2 1.3-.3 2-.3s1.4.1 2 .3c1.5-1 2.2-.8 2.2-.8.4 1.1.2 1.9.1 2.1.5.6.8 1.3.8 2.1 0 3.1-1.9 3.7-3.7 3.9.3.4.6.9.6 1.6v2.2c0 .2.1.5.6.4 3.2-1.1 5.5-4.1 5.5-7.6-.1-4.4-3.7-8-8.1-8z"/>
+                                            </svg> </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- 2nd block -->
+                        <div class="sm:col-span-6 md:col-span-3 lg:col-span-2">
+                            <h6 class="text-sm text-slate-50 font-medium mb-2">Programs</h6>
+                            <ul class="text-sm space-y-2">
+                                <li><a class="text-slate-400 hover:text-slate-200 transition duration-150 ease-in-out" href="#0">60-Day Launchpad</a>
+                                </li>
+                                <li><a class="text-slate-400 hover:text-slate-200 transition duration-150 ease-in-out" href="#0">Transformation Playbook</a>
+                                </li>
+                                <li><a class="text-slate-400 hover:text-slate-200 transition duration-150 ease-in-out" href="#0">Prompt Engineering Academy</a>
+                                </li>
+                                <li><a class="text-slate-400 hover:text-slate-200 transition duration-150 ease-in-out" href="#0">All Programs</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- 3rd block -->
+                        <div class="sm:col-span-6 md:col-span-3 lg:col-span-2">
+                            <h6 class="text-sm text-slate-50 font-medium mb-2">Company</h6>
+                            <ul class="text-sm space-y-2">
+                                <li><a class="text-slate-400 hover:text-slate-200 transition duration-150 ease-in-out" href="about.html">About Us</a>
+                                </li>
+                                <li><a class="text-slate-400 hover:text-slate-200 transition duration-150 ease-in-out" href="#0">Partners</a>
+                                </li>
+                                <li><a class="text-slate-400 hover:text-slate-200 transition duration-150 ease-in-out" href="#0">Success Stories</a>
+                                </li>
+                                <li><a class="text-slate-400 hover:text-slate-200 transition duration-150 ease-in-out" href="#0">Team</a>
+                                </li>
+                                <li><a class="text-slate-400 hover:text-slate-200 transition duration-150 ease-in-out" href="#0">Contact</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- 4th block -->
+                        <div class="sm:col-span-6 md:col-span-3 lg:col-span-2">
+                            <h6 class="text-sm text-slate-50 font-medium mb-2">Resources</h6>
+                            <ul class="text-sm space-y-2">
+                                <li><a class="text-slate-400 hover:text-slate-200 transition duration-150 ease-in-out" href="#0">AI Tool Directory</a>
+                                </li>
+                                <li><a class="text-slate-400 hover:text-slate-200 transition duration-150 ease-in-out" href="#0">Prompt Library</a>
+                                </li>
+                                <li><a class="text-slate-400 hover:text-slate-200 transition duration-150 ease-in-out" href="#0">Templates & Checklists</a>
+                                </li>
+                                <li><a class="text-slate-400 hover:text-slate-200 transition duration-150 ease-in-out" href="#0">AI News & Blog</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- 5th block -->
+                        <div class="sm:col-span-6 md:col-span-3 lg:col-span-2">
+                            <h6 class="text-sm text-slate-50 font-medium mb-2">Legal & Privacy</h6>
+                            <ul class="text-sm space-y-2">
+                                <li><a class="text-slate-400 hover:text-slate-200 transition duration-150 ease-in-out" href="#0">Terms of Service</a>
+                                </li>
+                                <li><a class="text-slate-400 hover:text-slate-200 transition duration-150 ease-in-out" href="#0">Privacy Policy</a>
+                                </li>
+                                <li><a class="text-slate-400 hover:text-slate-200 transition duration-150 ease-in-out" href="#0">Cookie Policy</a>
+                                </li>
+                                <li><a class="text-slate-400 hover:text-slate-200 transition duration-150 ease-in-out" href="#0">Disclaimer</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </div>
+        <script src="./js/vendors/alpinejs.min.js" defer></script>
+        <script src="./js/vendors/aos.js"></script>
+        <script src="./js/vendors/swiper-bundle.min.js"></script>
+        <script src="./js/main.js"></script>
+    </body>
+</html>
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
