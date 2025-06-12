@@ -64,36 +64,45 @@
                     <div class="flex items-center justify-between h-16 md:h-20">
                         <!-- Site branding -->
                         <div class="flex-1">
-                            <!-- Logo --><a class="inline-flex" href="index.html" aria-label="Prompt Engineering Academy"> <img class="max-w-none" src="./images/logo.svg" width="38" height="38" alt="Prompt Engineering Academy"> </a>
+                            <!-- Logo -->
+                            <a class="inline-flex" href="index.html" aria-label="Prompt Engineering Academy"> <img class="max-w-none" src="./images/logo.svg" width="38" height="38" alt="Prompt Engineering Academy"> </a>
                         </div>
                         <!-- Desktop navigation -->
                         <nav class="hidden md:flex md:grow">
                             <!-- Desktop menu links -->
                             <ul class="flex grow justify-center flex-wrap items-center">
-                                <li><a class="font-medium text-sm text-slate-300 hover:text-white mx-4 lg:mx-5 transition duration-150 ease-in-out" href="about.html">About Course</a>
+                                <li>
+                                    <a class="font-medium text-sm text-slate-300 hover:text-white mx-4 lg:mx-5 transition duration-150 ease-in-out" href="about.html">About Course</a>
                                 </li>
-                                <li><a class="font-medium text-sm text-slate-300 hover:text-white mx-4 lg:mx-5 transition duration-150 ease-in-out" href="modules.html">Course Modules</a>
+                                <li>
+                                    <a class="font-medium text-sm text-slate-300 hover:text-white mx-4 lg:mx-5 transition duration-150 ease-in-out" href="modules.html">Course Modules</a>
                                 </li>
-                                <li><a class="font-medium text-sm text-slate-300 hover:text-white mx-4 lg:mx-5 transition duration-150 ease-in-out" href="certification.html">Certification</a>
+                                <li>
+                                    <a class="font-medium text-sm text-slate-300 hover:text-white mx-4 lg:mx-5 transition duration-150 ease-in-out" href="certification.html">Certification</a>
                                 </li>
-                                <li><a class="font-medium text-sm text-slate-300 hover:text-white mx-4 lg:mx-5 transition duration-150 ease-in-out" href="testimonials.html">Student Reviews</a>
+                                <li>
+                                    <a class="font-medium text-sm text-slate-300 hover:text-white mx-4 lg:mx-5 transition duration-150 ease-in-out" href="testimonials.html">Student Reviews</a>
                                 </li>
-                                <li><a class="font-medium text-sm text-slate-300 hover:text-white mx-4 lg:mx-5 transition duration-150 ease-in-out" href="instructors.html">Instructors</a>
+                                <li>
+                                    <a class="font-medium text-sm text-slate-300 hover:text-white mx-4 lg:mx-5 transition duration-150 ease-in-out" href="instructors.html">Instructors</a>
                                 </li>
                             </ul>
                         </nav>
                         <!-- Desktop sign in links -->
                         <ul class="flex-1 flex justify-end items-center">
-                            <li><a class="font-medium text-sm text-slate-300 hover:text-white whitespace-nowrap transition duration-150 ease-in-out" href="preview.html">Course Preview</a>
+                            <li>
+                                <a class="font-medium text-sm text-slate-300 hover:text-white whitespace-nowrap transition duration-150 ease-in-out" href="preview.html">Course Preview</a>
                             </li>
-                            <li class="ml-6"><a class="btn-sm text-slate-300 hover:text-white transition duration-150 ease-in-out w-full group [background:linear-gradient(var(--color-slate-900),var(--color-slate-900))_padding-box,conic-gradient(var(--color-slate-400),var(--color-slate-700)_25%,var(--color-slate-700)_75%,var(--color-slate-400)_100%)_border-box] relative before:absolute before:inset-0 before:bg-slate-800/30 before:rounded-full before:pointer-events-none" href="enroll.html"> <span class="relative inline-flex items-center">
+                            <li class="ml-6">
+                                <a class="btn-sm text-slate-300 hover:text-white transition duration-150 ease-in-out w-full group [background:linear-gradient(var(--color-slate-900),var(--color-slate-900))_padding-box,conic-gradient(var(--color-slate-400),var(--color-slate-700)_25%,var(--color-slate-700)_75%,var(--color-slate-400)_100%)_border-box] relative before:absolute before:inset-0 before:bg-slate-800/30 before:rounded-full before:pointer-events-none" href="enroll.html"> <span class="relative inline-flex items-center">
                                     Enroll Now <span class="tracking-normal text-purple-500 group-hover:translate-x-0.5 transition-transform duration-150 ease-in-out ml-1">→</span> </span> </a>
                             </li>
                         </ul>
                         <!-- Mobile menu -->
                         <div class="md:hidden flex items-center ml-4" x-data="{ expanded: false }">
                             <!-- Hamburger button -->
-                            <button class="group inline-flex w-8 h-8 text-slate-300 hover:text-white text-center items-center justify-center transition" aria-controls="mobile-nav" :aria-expanded="expanded" @click.stop="expanded = !expanded"><span class="sr-only">Menu</span>
+                            <button class="group inline-flex w-8 h-8 text-slate-300 hover:text-white text-center items-center justify-center transition" aria-controls="mobile-nav" :aria-expanded="expanded" @click.stop="expanded = !expanded">
+                                <span class="sr-only">Menu</span>
                                 <svg class="w-4 h-4 fill-current pointer-events-none" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
                                     <rect class="origin-center transition-all duration-300 ease-[cubic-bezier(.5,.85,.25,1.1)] -translate-y-[5px] group-aria-expanded:rotate-[315deg] group-aria-expanded:translate-y-0" y="7" width="16" height="2" rx="1"></rect>
                                     <rect class="origin-center group-aria-expanded:rotate-45 transition-all duration-300 ease-[cubic-bezier(.5,.85,.25,1.8)]" y="7" width="16" height="2" rx="1"></rect>
@@ -103,15 +112,20 @@
                             <!-- Mobile navigation -->
                             <nav id="mobile-nav" class="absolute top-full z-20 left-0 w-full px-4 sm:px-6 overflow-hidden transition-all duration-300 ease-in-out" x-ref="mobileNav" :style="expanded ? 'max-height: ' + $refs.mobileNav.scrollHeight + 'px; opacity: 1' : 'max-height: 0; opacity: .8'" @click.outside="expanded = false" @keydown.escape.window="expanded = false" x-cloak>
                                 <ul class="border border-transparent [background:linear-gradient(var(--color-slate-900),var(--color-slate-900))_padding-box,conic-gradient(var(--color-slate-400),var(--color-slate-700)_25%,var(--color-slate-700)_75%,var(--color-slate-400)_100%)_border-box] rounded-lg px-4 py-1.5">
-                                    <li><a class="flex font-medium text-sm text-slate-300 hover:text-white py-1.5" href="about.html">About Course</a>
+                                    <li>
+                                        <a class="flex font-medium text-sm text-slate-300 hover:text-white py-1.5" href="about.html">About Course</a>
                                     </li>
-                                    <li><a class="flex font-medium text-sm text-slate-300 hover:text-white py-1.5" href="modules.html">Course Modules</a>
+                                    <li>
+                                        <a class="flex font-medium text-sm text-slate-300 hover:text-white py-1.5" href="modules.html">Course Modules</a>
                                     </li>
-                                    <li><a class="flex font-medium text-sm text-slate-300 hover:text-white py-1.5" href="certification.html">Certification</a>
+                                    <li>
+                                        <a class="flex font-medium text-sm text-slate-300 hover:text-white py-1.5" href="certification.html">Certification</a>
                                     </li>
-                                    <li><a class="flex font-medium text-sm text-slate-300 hover:text-white py-1.5" href="testimonials.html">Student Reviews</a>
+                                    <li>
+                                        <a class="flex font-medium text-sm text-slate-300 hover:text-white py-1.5" href="testimonials.html">Student Reviews</a>
                                     </li>
-                                    <li><a class="flex font-medium text-sm text-slate-300 hover:text-white py-1.5" href="instructors.html">Instructors</a>
+                                    <li>
+                                        <a class="flex font-medium text-sm text-slate-300 hover:text-white py-1.5" href="instructors.html">Instructors</a>
                                     </li>
                                 </ul>
                             </nav>
@@ -144,7 +158,8 @@
                                         <div class="flex flex-col lg:flex-row space-y-6 lg:space-y-0 lg:space-x-16">
                                             <!-- Back button -->
                                             <div class="shrink-0">
-                                                <div class="sticky top-6"><a class="flex items-center justify-center w-9 h-9 group border border-transparent rounded-full [background:linear-gradient(var(--color-slate-900),var(--color-slate-900))_padding-box,conic-gradient(var(--color-slate-400),var(--color-slate-700)_25%,var(--color-slate-700)_75%,var(--color-slate-400)_100%)_border-box] relative before:absolute before:inset-0 before:bg-slate-800/30 before:rounded-full before:pointer-events-none" href="index.html"> <span class="sr-only">Go back</span> <svg class="w-4 h-4 fill-purple-500" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+                                                <div class="sticky top-6">
+                                                    <a class="flex items-center justify-center w-9 h-9 group border border-transparent rounded-full [background:linear-gradient(var(--color-slate-900),var(--color-slate-900))_padding-box,conic-gradient(var(--color-slate-400),var(--color-slate-700)_25%,var(--color-slate-700)_75%,var(--color-slate-400)_100%)_border-box] relative before:absolute before:inset-0 before:bg-slate-800/30 before:rounded-full before:pointer-events-none" href="index.html"> <span class="sr-only">Go back</span> <svg class="w-4 h-4 fill-purple-500" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
                                                             <path d="M6.7 14.7l1.4-1.4L3.8 9H16V7H3.8l4.3-4.3-1.4-1.4L0 8z"/>
                                                         </svg> </a>
                                                 </div>
@@ -153,13 +168,10 @@
                                             <div>
                                                 <article class="pb-12 mb-12 border-b [border-image:linear-gradient(to_right,transparent,var(--color-slate-800),transparent)1]">
                                                     <figure class="bg-slate-700/20 border border-slate-300/10 p-4 rounded-3xl mb-8">
-                                                        <img class="w-full rounded-2xl" src="images/prompt-engineering-course-for-professionals.webp" width="586" height="316" alt="Prompt Engineering Course for Professionals - Complete Training Program Cover"/>
+                                                        <img class="w-full rounded-2xl" src="./images/prompt-engineering-course-cover.jpg" width="586" height="316" alt="Prompt Engineering Course for Professionals - Complete Training Program Cover"/>
                                                     </figure>
                                                     <h1 class="text-4xl font-bold text-slate-50 mb-6">Prompt Engineering Course for Professionals</h1>
-                                                    <div class="mb-8">
-                                                        <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-purple-500/20 text-purple-300 border border-purple-500/30 mr-3">Professional Certification</span>
-                                                        <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-blue-500/20 text-blue-300 border border-blue-500/30 mr-3">Hands-On Training</span>
-                                                        <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-green-500/20 text-green-300 border border-green-500/30">Industry Applications</span>
+                                                    <div class="mb-8"><span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-purple-500/20 text-purple-300 border border-purple-500/30 mr-3">Professional Certification</span><span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-blue-500/20 text-blue-300 border border-blue-500/30 mr-3">Hands-On Training</span><span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-green-500/20 text-green-300 border border-green-500/30">Industry Applications</span>
                                                     </div>
                                                     <!-- Course content -->
                                                     <div class="prose max-w-none text-slate-400 prose-headings:text-slate-50 prose-h2:text-xl prose-h2:mt-8 prose-h2:mb-4 prose-p:leading-relaxed prose-a:text-purple-500 prose-a:no-underline hover:prose-a:underline prose-strong:text-slate-50 prose-strong:font-medium prose-blockquote:pl-5 prose-blockquote:xl:-ml-5 prose-blockquote:border-l-2 prose-blockquote:border-purple-500 prose-blockquote:font-medium prose-blockquote:text-slate-300 prose-blockquote:italic">
